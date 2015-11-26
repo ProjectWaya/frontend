@@ -27,6 +27,8 @@ module.exports = function(defaults) {
   });
 
   app.import('bower_components/jquery-cookie/jquery.cookie.js');
+  app.import('bower_components/leaflet.locatecontrol/dist/L.Control.Locate.css');
+  app.import('bower_components/leaflet.locatecontrol/dist/L.Control.Locate.min.js');
 
   return app.toTree();
 };

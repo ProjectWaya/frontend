@@ -1,5 +1,11 @@
-
 export default {
+  "en": "English",
+  "fr": "French",
+  "es": "Spanish",
+  "de": "German",
+  "tr": "Turkish",
+  "ru": "Russian",
+  "zh": "Chinese",
   "pages": {
     "index": {
       "headline": "Welcome",

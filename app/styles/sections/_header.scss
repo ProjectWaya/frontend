@@ -5,17 +5,20 @@
 
 
 .waya-logo { 
-  background: pink; 
-  height: 100px;
-  width: 200px;
+  background: url('/assets/images/waya_logo.png') no-repeat; 
+  background-size: contain;
+  height: 50px;
+  width: 250px;
   
   @include breakpoint($tablet) {
     float: left; 
-    margin-right: $base-spacing;
+    height: 75px;
+    margin-right: $maximal-spacing;
+    width: 375px;
   }
 }
 
-
+.settings-box { margin-top: $maximal-spacing; }
 .language-picker {
   margin: $base-spacing;
   position: absolute;

@@ -12,7 +12,7 @@
       
       <div class="language-picker">
         {{#power-select options=languages searchEnabled=false selected=selectedLanguage onchange=(action "languageChanged") as |language|}}
-          {{world-flag language.iso 16}} <label class="language-picker__label">{{language.name}}</label>
+          {{world-flag language.flag 16}} <label class="language-picker__label">{{t language.name }}</label>
         {{/power-select}}
       </div> 
       
