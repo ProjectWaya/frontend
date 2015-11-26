@@ -7,7 +7,7 @@ const userStatus = ['Refugee', 'Asylum seeker', 'Just arrived'];
 export default Ember.Controller.extend({
   countries: countries,
   cities: cities,
-  userStatus: userStatus,  
+  userStatus: userStatus,
   selectedCountry: countries[0],
   selectedCity: cities[0],
   selectedUserStatus: userStatus[0],
@@ -28,7 +28,7 @@ export default Ember.Controller.extend({
       var info = {
         country: this.get('selectedCountry'),
         city: this.get('selectedCity'),
-        role: this.get('selectedRole')
+        userStatus: this.get('selectedRole')
       };
 
       info = JSON.stringify(info);
