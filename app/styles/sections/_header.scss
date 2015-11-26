@@ -1,0 +1,38 @@
+.header {
+
+
+}
+
+
+.waya-logo { 
+  background: pink; 
+  height: 100px;
+  width: 200px;
+  
+  @include breakpoint($tablet) {
+    float: left; 
+    margin-right: $base-spacing;
+  }
+}
+
+
+.language-picker {
+  margin: $base-spacing;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 50px;
+
+  @include breakpoint($tablet) {
+    width: 150px;
+  }
+
+}
+
+.language-picker__label { 
+  display: none; 
+  @include breakpoint($tablet) {
+    display: inline-block;
+  }
+} 
+

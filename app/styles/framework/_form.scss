@@ -4,3 +4,7 @@ fieldset {
   padding: 0;
 }
 
+input[type="checkbox"], 
+input[type="radio"] {
+  margin: $minimal-spacing $base-spacing;
+}

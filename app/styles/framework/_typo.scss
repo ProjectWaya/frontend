@@ -24,8 +24,8 @@ textarea {
 .h4, 
 .h5, 
 .h6, .text-additional-info {
-  @extend %base-margin-baselines;
   font-weight: normal;
+  margin-bottom: $base-spacing;
 }
 
 .h1, .text-headline { @include font-size(20px); }

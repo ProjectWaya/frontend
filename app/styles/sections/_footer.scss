@@ -1,0 +1,35 @@
+.footer { background: $maincolor; }
+
+
+
+
+.footer-list__group { 
+  
+  float: none;
+  overflow: hidden;
+  padding: $base-spacing 0; 
+  width: 100%; 
+  
+  @include breakpoint($tablet) {
+    @include span(4);
+  }
+}
+
+.footer-list__col { 
+  @include span(6 of 12);
+}
+
+
+
+.footer-icon {
+  height: 20px;
+  margin: $minimal-spacing;
+  width: 20px;
+
+  &:first-of-type { margin-left: 0; }
+}
+
+
+
+
+
