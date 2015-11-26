@@ -17,6 +17,8 @@
     "Faker": "~3.0.0",
     "leaflet": "~0.7.7",
     "leaflet.markercluster": "~0.4.0",
-    "jquery-cookie": "~1.4.1"
+    "jquery-cookie": "~1.4.1",
+    "susy": "~2.2.1",
+    "breakpoint-sass": "~2.5.0"
   }
 }
