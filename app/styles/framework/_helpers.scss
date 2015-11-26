@@ -34,3 +34,7 @@
 
 
 .col:last-of-type { @include omega(); }
+
+
+
+.additional-spacing-bottom { margin-bottom: $maximal-spacing; }

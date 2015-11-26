@@ -1,0 +1,7 @@
+{{partial 'navigation'}}
+
+{{#if currentLocation}}
+  {{wy-map location=currentLocation points=points}}
+{{else}}
+  <p class="text-subtle text-additional-info text-no-margin text-center">Loading map...</p>
+{{/if}}

@@ -7,9 +7,13 @@ var Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('home', { path: '/:lang' }, function() {
-    this.route('category', { path: '/:category_id' });
+    this.route('onboarding');
+    this.route('overview', function() {
+      this.route('category', { path: '/:category_id' }, function() {
+        this.route('subCategory',{ path: ':sub_category_id' });
+      });
+    });
   });
-  this.route('onboarding');
 });
 
 export default Router;

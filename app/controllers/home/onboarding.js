@@ -34,7 +34,7 @@ export default Ember.Controller.extend({
       info = JSON.stringify(info);
 
       $.cookie(this.get('cookieName'), info);
-      this.transitionTo('index');
+      this.transitionTo('home.overview');
     }
   }
 });
