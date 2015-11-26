@@ -2,9 +2,13 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
 	countries: ['France', 'Austria', 'Germany', 'Spain'],
-  actions: {
-    onCountrySelected() { 
-
-    }
-  }
+	cities: ['Paris', 'Lyon', 'Marseille', 'Bordeaux'],
+	actions: {
+		onCountrySelected() { 
+			console.log("selected country");
+    	},
+    	onCitySelected() {
+    		console.log("selected city");
+    	}
+	}
 });

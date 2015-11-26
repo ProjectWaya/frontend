@@ -6,5 +6,8 @@
       {{country}}
     {{/power-select}}
 
+    {{#power-select options=cities onchange=(action "onCitySelected") as |city|}}
+      {{city}}
+    {{/power-select}}
 
 </form>
