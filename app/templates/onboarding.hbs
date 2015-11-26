@@ -2,12 +2,24 @@
 
 <form {{action "updateUser" on="submit"}}>
 
-    {{#power-select options=countries onchange=(action "onCountrySelected") as |country|}}
-      {{country}}
-    {{/power-select}}
+  {{#power-select options=countries onchange=(action "onCountrySelected") as |country|}}
+    {{country}}
+  {{/power-select}}
 
-    {{#power-select options=cities onchange=(action "onCitySelected") as |city|}}
-      {{city}}
-    {{/power-select}}
+  {{#power-select options=cities onchange=(action "onCitySelected") as |city|}}
+    {{city}}
+  {{/power-select}}
+
+    <ul>
+      {{#each roles as |role|}}
+          <li>
+            {{radio-button
+            value=role
+            groupValue=currentRole
+            changed="roleChanged"}}
+              <label>{{role}}</label>
+          </li>
+      {{/each}}
+    </ul>
 
 </form>
