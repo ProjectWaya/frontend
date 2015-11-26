@@ -19,20 +19,17 @@
     </fieldset>
     <fieldset>
       <ul>
-        {{#each model as |status|}}
+        {{#each userStatus as |status|}}
             <li>
-              {{radio-button
-              value=status.key
-              groupValue=selectedUserStatus
-              }}
-              <label for="{{status.key}}">{{status.name}}</label>
+              {{radio-button value=status groupValue=selectedUserStatus}}
+              <label for="{{status.key}}">{{status}}</label>
             </li>
         {{/each}}
       </ul>
     </fieldset>
 
     <fieldset class="text-center">
-      <input class="bttn bttn-action" type="submit" value="Continue"/>
+      <input class="bttn bttn-action" type="submit" value="Continue" disabled={{isInfoInvalid}} />  
     </fieldset>
   </form>
 </div>
