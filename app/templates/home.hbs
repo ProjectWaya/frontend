@@ -1,12 +1,14 @@
-<h2>{{t "pages.index.headline"}}</h2><
-<h3>{{t "pages.index.tagline"}}</h3><
+<div class="additional-spacing-bottom text-center">
+  <h2 class="h2">{{t "pages.index.headline"}}</h2>
+  <h3 class="h3">{{t "pages.index.tagline"}}</h3>
 
-<button>{{t "pages.index.buttons.start"}}</button>
+  <button class="bttn bttn-action">{{t "pages.index.buttons.start"}}</button>
+</div>
 
 {{#if currentLocation}}
   {{wy-map location=currentLocation points=points}}
 {{else}}
-  Loading map...
+  <p class="text-subtle text-additional-info text-no-margin text-center">Loading map...</p>
 {{/if}}
 
 {{outlet}}
