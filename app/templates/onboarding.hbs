@@ -1,3 +1,6 @@
 <h2>Onboarding</h2>
 
-{{outlet}}
+
+    {{#power-select options=countries onchange=(action "onCountrySelected") as |country|}}
+      {{country}}
+    {{/power-select}}
