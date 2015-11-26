@@ -1,7 +1,11 @@
     const languages = [
       { name: 'English',  iso: 'gb' },
       { name: 'French',  iso: 'fr' },
-      { name: 'German',  iso: 'de' }
+      { name: 'Spanish',  iso: 'es' },
+      { name: 'German',  iso: 'de' },
+      { name: 'Turkish',  iso: 'tr' },
+      { name: 'Russian',  iso: 'ru' },
+      { name: 'Chinese',  iso: 'cn' },
     ];
 
     export default Ember.Controller.extend({
