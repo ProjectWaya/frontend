@@ -6,6 +6,7 @@ module.exports = function(environment) {
     environment: environment,
     baseURL: '/',
     locationType: 'auto',
+    defaultLocale: 'en',
     EmberENV: {
       FEATURES: {}
     },
@@ -22,7 +23,7 @@ module.exports = function(environment) {
   };
 
   if (environment === 'development') {
-    
+
   }
 
   if (environment === 'test') {
