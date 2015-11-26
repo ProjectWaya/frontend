@@ -1,10 +1,25 @@
-.footer { background: $maincolor; }
+.footer { 
+  background: $maincolor; 
+}
 
 
+@include breakpoint($tablet) {
+  .footer-helper {
+    clear: both;
+    height: 200px;
+    margin-top: $maximal-spacing;
+  }
+  .footer { 
+    bottom: 0;
+    height: 200px;
+    position: absolute;
+    width: 100%;
+  }
+
+}
 
 
-.footer-list__group { 
-  
+.footer-list__group {  
   float: none;
   overflow: hidden;
   padding: $base-spacing 0; 
