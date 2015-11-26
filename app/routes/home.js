@@ -5,8 +5,9 @@ export default Ember.Route.extend({
     !$.cookie('userInfo') && this.replaceWith('index');
   },
 
-  model: function(params) {
+  model(params) {
     var userInfoObject = JSON.parse($.cookie('userInfo'));
+
     if (!params.country) {
       params.country = userInfoObject.country;
     }
@@ -20,6 +21,18 @@ export default Ember.Route.extend({
     }
 
     console.log("params", params);
-    return this.get('store').find('point');
+
+    var points = this.get('store').find('point');
+    var tags   = this.get('store').find('tag');
+
+    return Ember.RSVP.hash({
+      points: points,
+      tags:   tags
+    });
+  },
+
+  setupController(controller, model) {
+    controller.set('model', model.points);
+    controller.set('tags', model.tags);
   }
 });

@@ -19,13 +19,13 @@
     </fieldset>
     <fieldset>
       <ul>
-        {{#each userStatus as |status|}}
+        {{#each model as |status|}}
             <li>
               {{radio-button
-              value=status
+              value=status.key
               groupValue=selectedUserStatus
               }}
-              <label for="{{status}}">{{status}}</label>
+              <label for="{{status.key}}">{{status.name}}</label>
             </li>
         {{/each}}
       </ul>

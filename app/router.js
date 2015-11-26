@@ -6,8 +6,8 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('home', function() {
-    this.route('category', {path: '/:category_id'});
+  this.route('home', { path: '/:lang' }, function() {
+    this.route('category', { path: '/:category_id' });
   });
   this.route('onboarding');
 });

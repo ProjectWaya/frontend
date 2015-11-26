@@ -5,9 +5,9 @@ export default ApplicationSerializer.extend({
 
   normalizeResponse(store, primaryModelClass, payload, id, requestType) {
 
-    payload.data = payload.data.map((p) => {
-      p.type = "point";
-      return p;
+    payload.data = payload.data.map((t) => {
+      t.type      = "tag";
+      return t;
     });
 
     return this._super(...arguments);
