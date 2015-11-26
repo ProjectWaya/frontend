@@ -2,35 +2,33 @@ import Ember from 'ember';
 
 const countries = ['France', 'Austria', 'Germany', 'Spain'];
 const cities = ['Paris', 'Lyon', 'Marseille', 'Bordeaux'];
+const userStatus = ['Refugee', 'Asylum seeker', 'Just arrived'];
 
 export default Ember.Controller.extend({
   countries: countries,
-  defaultCountry: countries[0],
   cities: cities,
-  defaultCity: cities[0],
-  roles: ['refugee', 'asyliumSeeker', 'justArrived'],
-  currentRole: 'refugee',
+  userStatus: userStatus,  
+  selectedCountry: countries[0],
+  selectedCity: cities[0],
+  selectedUserStatus: userStatus[0],
   cookieName: 'userInfo',
   country: null,
   city: null,
-  role: 'asylum',
 
-  isInfoValid: Ember.computed.and('defaultCountry', 'defaultCity', 'currentRole'),
+  isInfoValid: Ember.computed.and('selectedCountry', 'selectedCity', 'selectedUserStatus'),
 
   actions: {
-    onCountrySelected() {
-      console.log("selected country: " + country);
-      this.set('defaultCountry', country);
+    onCountrySelected(country) {
+      this.set('selectedCountry', country);
     },
-    onCitySelected() {
-      console.log("selected city: " + city);
-      this.set('defaultCity', city);
+    onCitySelected(city) {
+      this.set('selectedCity', city);
     },
     setInfo() {
       var info = {
-        country: this.get('defaultCountry'),
-        city: this.get('defaultCity'),
-        role: this.get('currentRole')
+        country: this.get('selectedCountry'),
+        city: this.get('selectedCity'),
+        role: this.get('selectedRole')
       };
 
       info = JSON.stringify(info);
