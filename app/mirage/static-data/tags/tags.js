@@ -1,283 +1,318 @@
 export default {
   "data": [
     { 
-      "id": 1,
-      "type": 'tag',
+      "id": "1",
+      "type": "tag",
       "attributes": {
-        "parent_id": 0,
-        "name": 'shelter',
-        "lName": 'Shelter',
-        "sort_order": 1
+        "category": "main_category",
+        "name": "shelter",
+        "description": "Shelter",
+        "sortno": "1"
+      },
+      "relationships": {
+        "parent_tag": {
+          "data": null
+        }
       }
     },
     { 
-      "id": 2,
-      "type": 'tag',
+      "id": "2",
+      "type": "tag",
       "attributes": {
-        "parent_id": 0,
-        "name": 'healthCare',
-        "lName": 'Health Care',
-        "sort_order": 2
+        "category": "main_category",
+        "name": "healthCare",
+        "description": "Health Care",
+        "sortno": "2"
+      },
+      "relationships": {
+        "parent_tag": {
+          "data": null
+        }
       }
     },
     { 
-      "id": 3,
-      "type": 'tag',
+      "id": "3",
+      "type": "tag",
       "attributes": {
-        "parent_id": 0,
-        "name": 'transportation',
-        "lName": 'Transportation',
-        "sort_order": 3
+        "category": "main_category",
+        "name": "transportation",
+        "description": "Transportation",
+        "sortno": "3"
+      },
+      "relationships": {
+        "parent_tag": {
+          "data": null
+        }
       }
     },
     { 
-      "id": 4,
-      "type": 'tag',
+      "id": "4",
+      "type": "tag",
       "attributes": {
-        "parent_id": 0,
-        "name": 'asylumProcess',
-        "lName": 'Asylum Process',
-        "sort_order": 4
+        "category": "main_category",
+        "name": "asylumProcess",
+        "description": "Asylum Process",
+        "sortno": "4"
+      },
+      "relationships": {
+        "parent_tag": {
+          "data": null
+        }
       }
     },
     { 
-      "id": 5,
-      "type": 'tag',
+      "id": "5",
+      "type": "tag",
       "attributes": {
-        "parent_id": 0,
-        "name": 'education',
-        "lName": 'Education',
-        "sort_order": 5
+        "category": "main_category",
+        "name": "education",
+        "description": "Education",
+        "sortno": "5"
+      },
+      "relationships": {
+        "parent_tag": {
+          "data": null
+        }
       }
     },
     { 
-      "id": 6,
-      "type": 'tag',
+      "id": "6",
+      "type": "tag",
       "attributes": {
-        "parent_id": 0,
-        "name": 'administrativeProcess',
-        "lName": 'Administrative process',
-        "sort_order": 6
+        "category": "main_category",
+        "name": "administrativeProcess",
+        "description": "Administrative process",
+        "sortno": "6"
+      },
+      "relationships": {
+        "parent_tag": {
+          "data": null
+        }
       }
     },
     { 
-      "id": 7,
-      "type": 'tag',
+      "id": "7",
+      "type": "tag",
       "attributes": {
-        "parent_id": 0,
-        "name": 'entertainment',
-        "lName": 'Entertainment',
-        "sort_order": 7
+        "category": "main_category",
+        "name": "entertainment",
+        "description": "Entertainment",
+        "sortno": "7"
+      },
+      "relationships": {
+        "parent_tag": {
+          "data": null
+        }
       }
     },
     { 
-      "id": 8,
-      "type": 'tag',
+      "id": "8",
+      "type": "tag",
       "attributes": {
-        "parent_id": 0,
-        "name": 'food',
-        "lName": 'Food',
-        "sort_order": 8
+        "category": "main_category",
+        "name": "food",
+        "description": "Food",
+        "sortno": "8"
+      },
+      "relationships": {
+        "parent_tag": {
+          "data": null
+        }
       }
     },
     { 
-      "id": 9,
-      "type": 'tag',
+      "id": "9",
+      "type": "tag",
       "attributes": {
-        "parent_id": 0,
-        "name": 'contacts',
-        "lName": 'Contacts',
-        "sort_order": 9
+        "category": "main_category",
+        "name": "contacts",
+        "description": "Contacts",
+        "sortno": "9"
+      },
+      "relationships": {
+        "parent_tag": {
+          "data": null
+        }
       }
     },
     { 
-      "id": 10,
-      "type": 'tag',
+      "id": "10",
+      "type": "tag",
       "attributes": {
-        "parent_id": 0,
-        "name": 'shelter',
-        "lName": 'Shelter',
-        "sort_order": 1
+        "category": "sub_category",
+        "name": "emergency_shelters",
+        "description": "Emergency shelters",
+        "sortno": "1"
+      },
+      "relationships": {
+        "parent_tag": {
+          "data": {
+            "id": "1",
+            "type": "tag"
+          }
+        }
       }
     },
     { 
-      "id": 11,
-      "type": 'tag',
+      "id": "11",
+      "type": "tag",
       "attributes": {
-        "parent_id": 0,
-        "name": 'healthCare',
-        "lName": 'Health Care',
-        "sort_order": 2
+        "category": "sub_category",
+        "name": "cada",
+        "description": "CADA",
+        "sortno": "2"
+      },
+      "relationships": {
+        "parent_tag": {
+          "data": {
+            "id": "1",
+            "type": "tag"
+          }
+        }
       }
     },
     { 
-      "id": 12,
-      "type": 'tag',
+      "id": "12",
+      "type": "tag",
       "attributes": {
-        "parent_id": 0,
-        "name": 'transportation',
-        "lName": 'Transportation',
-        "sort_order": 3
+        "category": "sub_category",
+        "name": "cph",
+        "description": "CPH",
+        "sortno": "3"
+      },
+      "relationships": {
+        "parent_tag": {
+          "data": {
+            "id": "1",
+            "type": "tag"
+          }
+        }
       }
     },
     { 
-      "id": 13,
-      "type": 'tag',
+      "id": "13",
+      "type": "tag",
       "attributes": {
-        "parent_id": 0,
-        "name": 'asylumProcess',
-        "lName": 'Asylum Process',
-        "sort_order": 4
+        "category": "sub_category",
+        "name": "hotel_hostels",
+        "description": "Hotel / Hostels",
+        "sortno": "4"
+      },
+      "relationships": {
+        "parent_tag": {
+          "data": {
+            "id": "1",
+            "type": "tag"
+          }
+        }
       }
     },
     { 
-      "id": 14,
-      "type": 'tag',
+      "id": "14",
+      "type": "tag",
       "attributes": {
-        "parent_id": 0,
-        "name": 'education',
-        "lName": 'Education',
-        "sort_order": 5
+        "category": "sub_category",
+        "name": "calm",
+        "description": "CALM",
+        "sortno": "5"
+      },
+      "relationships": {
+        "parent_tag": {
+          "data": {
+            "id": "1",
+            "type": "tag"
+          }
+        }
       }
     },
     { 
-      "id": 15,
-      "type": 'tag',
+      "id": "15",
+      "type": "tag",
       "attributes": {
-        "parent_id": 0,
-        "name": 'administrativeProcess',
-        "lName": 'Administrative process',
-        "sort_order": 6
+        "category": "tag",
+        "name": "women",
+        "description": "Women",
+        "sortno": "1"
+      },
+      "relationships": {
+        "parent_tag": {
+          "data": null
+        }
       }
     },
     { 
-      "id": 16,
-      "type": 'tag',
+      "id": "16",
+      "type": "tag",
       "attributes": {
-        "parent_id": 0,
-        "name": 'entertainment',
-        "lName": 'Entertainment',
-        "sort_order": 7
+        "category": "tag",
+        "name": "minor",
+        "description": "Minor",
+        "sortno": "2"
+      },
+      "relationships": {
+        "parent_tag": {
+          "data": null
+        }
       }
     },
     { 
-      "id": 17,
-      "type": 'tag',
+      "id": "17",
+      "type": "tag",
       "attributes": {
-        "parent_id": 0,
-        "name": 'food',
-        "lName": 'Food',
-        "sort_order": 8
+        "category": "tag",
+        "name": "trans",
+        "description": "Trans",
+        "sortno": "3"
+      },
+      "relationships": {
+        "parent_tag": {
+          "data": null
+        }
       }
     },
     { 
-      "id": 18,
-      "type": 'tag',
+      "id": "18",
+      "type": "tag",
       "attributes": {
-        "parent_id": 1,
-        "name": 'emergency_shelters',
-        "lName": 'Emergency shelters',
-        "sort_order": 1
+        "category": "tag",
+        "name": "couple",
+        "description": "Couple",
+        "sortno": "4"
+      },
+      "relationships": {
+        "parent_tag": {
+          "data": null
+        }
       }
     },
     { 
-      "id": 19,
-      "type": 'tag',
+      "id": "19",
+      "type": "tag",
       "attributes": {
-        "parent_id": 1,
-        "name": 'cada',
-        "lName": 'CADA',
-        "sort_order": 2
+        "category": "tag",
+        "name": "family",
+        "description": "Family",
+        "sortno": "5"
+      },
+      "relationships": {
+        "parent_tag": {
+          "data": null
+        }
       }
     },
     { 
-      "id": 20,
-      "type": 'tag',
+      "id": "20",
+      "type": "tag",
       "attributes": {
-        "parent_id": 1,
-        "name": 'cph',
-        "lName": 'CPH',
-        "sort_order": 3
-      }
-    },
-    { 
-      "id": 21,
-      "type": 'tag',
-      "attributes": {
-        "parent_id": 1,
-        "name": 'hotel_hostels',
-        "lName": 'Hotel / Hostels',
-        "sort_order": 4
-      }
-    },
-    { 
-      "id": 22,
-      "type": 'tag',
-      "attributes": {
-        "parent_id": 1,
-        "name": 'calm',
-        "lName": 'CALM',
-        "sort_order": 5
-      }
-    },
-    { 
-      "id": 23,
-      "type": 'tag',
-      "attributes": {
-        "parent_id": null,
-        "name": 'women',
-        "lName": 'Women',
-        "sort_order": 1
-      }
-    },
-    { 
-      "id": 24,
-      "type": 'tag',
-      "attributes": {
-        "parent_id": null,
-        "name": 'minor',
-        "lName": 'Minor',
-        "sort_order": 2
-      }
-    },
-    { 
-      "id": 25,
-      "type": 'tag',
-      "attributes": {
-        "parent_id": null,
-        "name": 'trans',
-        "lName": 'Trans',
-        "sort_order": 3
-      }
-    },
-    { 
-      "id": 26,
-      "type": 'tag',
-      "attributes": {
-        "parent_id": null,
-        "name": 'couple',
-        "lName": 'Couple',
-        "sort_order": 4
-      }
-    },
-    { 
-      "id": 27,
-      "type": 'tag',
-      "attributes": {
-        "parent_id": null,
-        "name": 'family',
-        "lName": 'Family',
-        "sort_order": 5
-      }
-    },
-    { 
-      "id": 28,
-      "type": 'tag',
-      "attributes": {
-        "parent_id": null,
-        "name": 'handicap',
-        "lName": 'Handicap',
-        "sort_order": 6
+        "category": "tag",
+        "name": "handicap",
+        "description": "Handicap",
+        "sortno": "6"
+      },
+      "relationships": {
+        "parent_tag": {
+          "data": null
+        }
       }
     }
   ]
