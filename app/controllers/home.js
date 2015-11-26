@@ -12,5 +12,13 @@ export default Ember.Controller.extend({
         lng: crd.longitude
       });
     }.bind(this));
+  }),
+
+  points: Ember.computed({
+    get() {
+      return this.get('model').map((p) => {
+        return {location: L.latLng(p.get('latitude'), p.get('longitude'))};
+      });
+    }
   })
-});
+}); 

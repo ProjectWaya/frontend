@@ -4,7 +4,7 @@
 <button>{{t "pages.index.buttons.start"}}</button>
 
 {{#if currentLocation}}
-  {{wy-map location=currentLocation}}
+  {{wy-map location=currentLocation points=points}}
 {{else}}
   Loading map...
 {{/if}}
