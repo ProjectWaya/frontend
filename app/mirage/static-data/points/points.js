@@ -4,8 +4,8 @@ export default {
     "type": "point_of_interest",
     "attributes": {
       "name": "KH Linz",
-      "latitude": 1,
-      "longitude": 1,
+      "latitude": 48.2432843,
+      "longitude": 14.2362089,
       "description": "Unfallkrankenhaus in Linz",
       "address": "KH-Strasse 21, 4020 Linz",
       "city": "Linz",

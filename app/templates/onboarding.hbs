@@ -4,22 +4,22 @@
 <form {{action "setInfo" on="submit"}}>
 
 	<label>Country</label>
-    {{#power-select options=countries selected=defaultCountry onchange=(action "onCountrySelected") as |country|}}
+    {{#power-select options=countries selected=selectedCountry onchange=(action "onCountrySelected") as |country|}}
       {{country}}
     {{/power-select}}
     <label>City</label>
-    {{#power-select options=cities selected=defaultCity onchange=(action "onCitySelected") as |city|}}
+    {{#power-select options=cities selected=selectedCity onchange=(action "onCitySelected") as |city|}}
       {{city}}
     {{/power-select}}
 
     <ul>
-      {{#each roles as |role|}}
+      {{#each userStatus as |status|}}
           <li>
             {{radio-button
-            value=role
-            groupValue=currentRole
+            value=status
+            groupValue=selectedUserStatus
             }}
-            <label for="{{role}}">{{role}}</label>
+            <label for="{{status}}">{{status}}</label>
           </li>
       {{/each}}
     </ul>

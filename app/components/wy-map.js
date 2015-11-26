@@ -1,5 +1,11 @@
 import Ember from 'ember';
 import EmberLeafletComponent from 'ember-leaflet/components/leaflet-map';
+import MarkerCollectionLayer from  'ember-leaflet/layers/marker-collection';
+import OpenStreetMapLayer from '../layers/open-street-map-layer';
+
+var markerLayer = MarkerCollectionLayer.extend({
+  contentBinding: 'controller.points'
+});
 
 export default EmberLeafletComponent.extend({
   classNameBindings: ['isReady'],
@@ -15,6 +21,15 @@ export default EmberLeafletComponent.extend({
     get() {
       var location = this.get('location');
       return L.latLng(location.lat, location.lng);
+    }
+  }),
+
+  childLayers: Ember.computed({
+    get() {
+      return [
+        OpenStreetMapLayer,
+        markerLayer
+      ];
     }
   })
 });
