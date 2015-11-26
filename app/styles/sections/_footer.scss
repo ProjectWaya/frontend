@@ -5,7 +5,6 @@
 
 @include breakpoint($tablet) {
   .footer-helper {
-    clear: both;
     height: 200px;
     margin-top: $maximal-spacing;
   }
