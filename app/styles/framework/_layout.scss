@@ -1,0 +1,16 @@
+.wrapper {
+  @include breakpoint($desktop) {
+    @include container(90%);
+    max-width: $max-layout-width;
+    position: relative;
+  }
+}
+
+
+
+
+.footer { background: $maincolor; }
+.footer-list__group { padding: $base-spacing 0; }
+
+.footer-list__col { 
+}

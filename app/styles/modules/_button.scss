@@ -1,0 +1,105 @@
+.bttn {
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: normal;
+  margin-bottom: 0;
+  padding: $base-spacing $double-base-spacing;
+  text-align: center;
+  user-select: none;
+  vertical-align: middle;
+  white-space: normal;
+
+  &.full-width { 
+    display: block;
+    margin-left: $base-spacing;
+    margin-right: $base-spacing; 
+
+    @include breakpoint($tablet) {
+      margin-left: 0;
+      margin-right: 0;    
+    }
+  }
+
+  &.is-unbreakable { white-space: nowrap; }
+  &.is-fullwidth { width: 100%; } // TODO: remove duplicate
+  &.is-block {
+    margin: 0;
+    width: 100%;
+    & + .bttn.is-block { margin: $base-spacing 0 0 0; }
+  }
+}
+
+
+.bttn:hover, .bttn:focus {
+  color: #333;
+  text-decoration: none;
+}
+
+
+.bttn:focus,
+.bttn:active:focus,
+.bttn.active:focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+
+
+
+.bttn-primary {
+  color: $white;
+  background-color: $maincolor;
+}
+
+.bttn-primary:hover, .bttn-primary:focus,
+.bttn-primary:active, .bttn-primary.active {
+  color: $white;
+  background-color: $maincolor_highlight;
+}
+
+
+
+
+
+.bttn-action {
+  color: $white;
+  background-color: $secondcolor;
+}
+
+
+.bttn-action:hover, .bttn-action:focus,
+.bttn-action:active, .bttn-action.active {
+  color: $white;
+  background-color: $secondcolor_highlight;
+}
+
+
+.bttn.is-disabled { 
+  background-color: lighten($gray, 45%);
+  cursor: default; 
+}
+
+
+
+
+
+
+
+
+
+
+.bttn-base-padding { padding: $base-spacing; }
+.bttn-minimal-padding { padding: $minimal-spacing; }
+
+.bttn-spacer { margin-bottom: $base-spacing; }
+.bttn-spacer-top { margin-top: $base-spacing; }
+
+
+
+
+
