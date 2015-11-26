@@ -8,7 +8,7 @@
     <div class="language-picker">
       <div class="language-picker-label">Change language</div>
       {{#power-select options=languages searchEnabled=false selected=selectedLanguage onchange=(action "languageChanged") as |language|}}
-        {{world-flag language.iso 16}} <strong>{{language.name}}</strong>
+        {{world-flag language.flag 16}} <strong>{{t language.name }}</strong>
       {{/power-select}}
     </div>
   </div>
