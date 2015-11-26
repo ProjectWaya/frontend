@@ -1,6 +1,9 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
+  beforeModel() {
+    !$.cookie('userInfo') && this.replaceWith('index');
+  },
 
   model: function(params) {
     var userInfoObject = JSON.parse($.cookie('userInfo'));
