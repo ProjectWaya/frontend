@@ -41,18 +41,8 @@ $red: #df1c1b;
 
 
 
-
-$gray: #2a3036;
-$base-gray: #333;
-$light-gray: #e1e5e8;
-$grayT30: tint($gray, 30%);
-$grayT60: tint($gray, 60%);
-$grayT95: tint($gray, 95%);
-$light-grayT30: tint($light-gray, 30%);
-$soft-gray: tint($light-gray, 90%);
-$table-gray: lighten($black, 70%);
-
-
+$gray: #333;
+$lightgray: #e1e5e8;
 
 
 // Border radius
@@ -85,6 +75,3 @@ $icon-size-large: $base-icon-size*1.5;
 $icon-size-xlarge: $base-icon-size*2;
 
 
-
-$base-table-border: 1px solid $table-gray;
-$max-z-index: 2147483647;

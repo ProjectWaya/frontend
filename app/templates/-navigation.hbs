@@ -1,10 +1,18 @@
-<ul>
+<ul class="nav">
   {{#each mainCategories as |category|}}
-    <li>{{category.name}}</li>
+    <li class="media-table nav__item">
+        
+      <div class="media__object icon nav-icon nav-icon-{{category.name}}"></div>
+      <div class="media__body nav-label"> 
+        {{category.name}}
+      </div>
+    </li>
     <li>
-      <ul>
+      <ul class="sub-nav">
         {{#each category.childTags as |subCategory|}}
-          <li>{{subCategory.name}}</li>
+          <li class="sub-nav__item">
+              {{subCategory.name}}          
+         </li>
         {{/each}}
       </ul>
     </li>

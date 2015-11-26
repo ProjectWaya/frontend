@@ -4,6 +4,7 @@ html {
 }
 
 .wrapper {
+  @extend %group;
   padding: $base-spacing; 
   @include breakpoint($desktop) {
     @include container(90%);
