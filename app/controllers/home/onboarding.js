@@ -15,7 +15,12 @@ export default Ember.Controller.extend({
   country: null,
   city: null,
 
-  isInfoValid: Ember.computed.and('selectedCountry', 'selectedCity', 'selectedUserStatus'),
+  isValidCountry: Ember.computed.bool('selectedCountry'),
+  isValidCity: Ember.computed.bool('selectedCity'),
+  isValidUserStatus: Ember.computed.bool('selectedUserStatus'),
+
+  isInfoValid: Ember.computed.and('isValidCountry', 'isValidCity', 'isValidUserStatus'),
+  isInfoInvalid: Ember.computed.not('isInfoValid'),
 
   actions: {
     onCountrySelected(country) {
