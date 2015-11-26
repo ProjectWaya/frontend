@@ -1,6 +1,6 @@
 <h2>Onboarding</h2>
 
-<form {{action "updateUser" on="submit"}}>
+<form {{action "setInfo" on="submit"}}>
 
   {{#power-select options=countries onchange=(action "onCountrySelected") as |country|}}
     {{country}}
@@ -16,10 +16,11 @@
             {{radio-button
             value=role
             groupValue=currentRole
-            changed="roleChanged"}}
+            }}
               <label>{{role}}</label>
           </li>
       {{/each}}
     </ul>
+    <input type="submit" value="Continue"/>
 
 </form>

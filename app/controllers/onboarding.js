@@ -11,9 +11,6 @@ export default Ember.Controller.extend({
     },
     onCitySelected() {
       console.log("selected city");
-    },
-    roleChanged() {
-
     }
   }
 });
