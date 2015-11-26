@@ -19,6 +19,7 @@
     "leaflet.markercluster": "~0.4.0",
     "jquery-cookie": "~1.4.1",
     "susy": "~2.2.1",
-    "breakpoint-sass": "~2.5.0"
+    "breakpoint-sass": "~2.5.0",
+    "leaflet.locatecontrol": "~0.45.1"
   }
 }

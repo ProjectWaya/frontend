@@ -31,5 +31,10 @@ export default EmberLeafletComponent.extend({
         markerLayer
       ];
     }
-  })
+  }),
+
+  didCreateLayer() {
+    this._super();
+    L.control.locate().addTo(this._layer);
+  }
 });
