@@ -15,8 +15,8 @@ export default Ember.Controller.extend({
   city: null,
   role: 'asylum',
 
-  isInfoValid: Ember.computed.and('country', 'city', 'role'),
-  
+  isInfoValid: Ember.computed.and('defaultCountry', 'defaultCity', 'currentRole'),
+
   actions: {
     onCountrySelected() {
       console.log("selected country: " + country);
@@ -28,9 +28,9 @@ export default Ember.Controller.extend({
     },
     setInfo() {
       var info = {
-        country: this.get('country'),
-        city: this.get('city'),
-        role: this.get('role')
+        country: this.get('defaultCountry'),
+        city: this.get('defaultCity'),
+        role: this.get('currentRole')
       };
 
       info = JSON.stringify(info);
