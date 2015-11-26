@@ -1,7 +1,12 @@
 <h2>{{t "pages.index.headline"}}</h2><
-<h2>{{t "pages.index.tagline"}}</h2><
+<h3>{{t "pages.index.tagline"}}</h3><
 
 <button>{{t "pages.index.buttons.start"}}</button>
-{{wy-map}}
+
+{{#if currentLocation}}
+  {{wy-map location=currentLocation}}
+{{else}}
+  Loading map...
+{{/if}}
 
 {{outlet}}

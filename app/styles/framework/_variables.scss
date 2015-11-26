@@ -1,0 +1,88 @@
+@include border-box-sizing;
+
+$susy: (
+  columns: 12,
+  gutters: .25,
+  math: fluid,
+);
+
+
+// Breakpoints
+$mobile-small: 450px;
+$mobile: max-width 879px;
+$tablet: 880px; 
+$desktop: 1000px; 
+$max-layout-width: 1200px;
+
+
+// Colors
+$black: #313131;
+$white: #fff;
+
+
+$maincolor: pink;
+$secondcolor: lightblue;
+
+
+$base-text-color: $black;
+
+$linkcolor: $secondcolor;
+$linkcolor_hover: tint($linkcolor, 15%);
+
+
+$red: #df1c1b;
+
+
+
+
+
+
+
+
+
+$gray: #2a3036;
+$base-gray: #333;
+$light-gray: #e1e5e8;
+$grayT30: tint($gray, 30%);
+$grayT60: tint($gray, 60%);
+$grayT95: tint($gray, 95%);
+$light-grayT30: tint($light-gray, 30%);
+$soft-gray: tint($light-gray, 90%);
+$table-gray: lighten($black, 70%);
+
+
+
+
+// Border radius
+$border-radius-default: 6px;
+
+// Browser support 
+$ie7: false;
+$ie8: false;
+
+
+// Typography
+// When using baseFontSize variable, must use it with font-size mixin
+$base-font-size: 14px;
+$base-font-family: Helvetica, Arial, "Trebuchet MS", sans-serif;
+$base-line-height: 1.5;
+$maximal-spacing: $base-line-height/1.25+em;
+$minimal-spacing: $base-line-height/3+em;
+$base-spacing: $base-line-height/2+em;
+$double-base-spacing: $base-line-height+em;
+
+
+
+
+// Icons
+$base-icon-size: 20px;
+$icon-size-mini: $base-icon-size*.5;
+$icon-size-small: $base-icon-size*.75;
+$icon-size-medium: $base-icon-size;
+$icon-size-large: $base-icon-size*1.5;
+$icon-size-xlarge: $base-icon-size*2;
+
+
+
+$base-table-border: 1px solid $table-gray;
+$max-z-index: 2147483647;

@@ -1,0 +1,95 @@
+html, body { 
+  background: $light-gray;
+}
+
+html { font-size: 100%; }
+
+body {
+  @include font-size($base-font-size);
+  color: $base-text-color;
+  font-family: $base-font-family;
+  line-height: $base-line-height;
+}
+
+body, 
+input,
+select, 
+textarea {
+  font-family: $base-font-family;
+}
+
+.h1, .text-headline,
+.h2, .text-sub-headline,
+.h3, 
+.h4, 
+.h5, 
+.h6, .text-additional-info {
+  @extend %base-margin-baselines;
+  font-weight: normal;
+}
+
+.h1, .text-headline { @include font-size(20px); }
+.h2, .text-sub-headline { @include font-size(18px); }
+.h3 { @include font-size(16px); }
+.h4 { @include font-size(15px); }
+.h5 { @include font-size(14px); }
+
+.h6, .text-additional-info { @include font-size(12px); }
+
+p { @extend %base-margin-baselines; }
+
+
+pre,
+code {
+  font-family: Consolas, Monaco, "Lucida Console", monospace;
+}
+
+
+a { 
+  color: $linkcolor; 
+  cursor: pointer; 
+  text-decoration: none; 
+  &:hover { color: $linkcolor_hover; }
+}
+
+.text-bold { font-weight: bold; }
+.text-normal { font-weight: normal; }
+
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+.text-subtle, %text-subtle { 
+  color: lighten($base-text-color, 30%); 
+}
+
+.text-no-margin, %text-no-margin { 
+  margin: 0;
+}
+
+.text-display-block {
+  display: block;
+}
+
+.text-error {
+  color: $red;
+  font-style: italic;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+
+.text-inline { display: inline-block; }
+
+
+
+.text-white { color: $white; }
+.text-default-color { color: $base-text-color; }
+
+.text-no-link { color: inherit; }
+.text-no-link--no-hover:hover { color: inherit; }
+
+
+
