@@ -2,12 +2,12 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   redirect() {
-    // TODO: Read cookie
-    var isNewUser = true;
+    var userInfo = $.cookie('userInfo');
 
-    if (isNewUser) {
+    if (!userInfo) {
       this.replaceWith('onboarding');
     } else {
+      // TODO: Read and set user info values
       this.replaceWith('home');
     }
   }
