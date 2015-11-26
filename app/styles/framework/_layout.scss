@@ -16,7 +16,31 @@
 
 
 
+.header {
 
+
+}
+
+
+.waya-logo { 
+  background: pink; 
+  height: 100px;
+  width: 200px;
+  float: left;
+}
+
+
+.settings-box {
+  background: pink; 
+  display: block;
+  
+
+}
+
+.language-picker {
+ background: pink;
+ float: right;
+}
 
 
 .footer { background: $maincolor; }

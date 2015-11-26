@@ -1,14 +1,14 @@
-@each $fileName in listFiles('/public/assets/icons/*.svg') {
+@each $fileName in listFiles('public/assets/icons/*.svg') {
   .icon-#{$fileName} {
-    background-image: url('/public/assets/icons/#{$fileName}.svg');
+    background-image: url('/assets/icons/#{$fileName}.svg');
     background-size: contain;
   }
 }
 
 
-@each $fileName in listFiles('/public/assets/navigation/*.svg') {
+@each $fileName in listFiles('public/assets/navigation/*.svg') {
   .nav-icon-#{$fileName} {
-    background-image: url('/public/assets/navigation/#{$fileName}.svg');
+    background-image: url('/assets/navigation/#{$fileName}.svg');
     background-size: contain;
   }
 }

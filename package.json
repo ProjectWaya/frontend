@@ -43,6 +43,8 @@
     "ember-leaflet": "git://github.com/gabesmed/ember-leaflet.git#8c22085c93ababc709c9c01d11905fccac496f71",
     "ember-power-select": "0.5.2",
     "ember-radio-button": "1.0.7",
-    "ember-world-flags": "0.2.4"
+    "ember-world-flags": "0.2.4",
+    "glob": "4.0.5",
+	"node-sass": "3.3.1"
   }
 }
