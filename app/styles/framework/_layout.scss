@@ -1,4 +1,5 @@
 .wrapper {
+  padding: $base-spacing; 
   @include breakpoint($desktop) {
     @include container(90%);
     max-width: $max-layout-width;
@@ -6,11 +7,75 @@
   }
 }
 
+@include breakpoint($tablet) {
+  .small-wrapper {
+    margin: 0 auto;
+    width: 40%;
+  }
+}
 
+
+
+.header {
+
+
+}
+
+
+.waya-logo { 
+  background: pink; 
+  height: 100px;
+  width: 200px;
+  float: left;
+}
+
+
+.settings-box {
+  background: pink; 
+  display: block;
+  
+
+}
+
+.language-picker {
+ background: pink;
+ float: right;
+}
 
 
 .footer { background: $maincolor; }
-.footer-list__group { padding: $base-spacing 0; }
+
+
+
+
+.footer-list__group { 
+  
+  float: none;
+  overflow: hidden;
+  padding: $base-spacing 0; 
+  width: 100%; 
+  
+  @include breakpoint($tablet) {
+    @include span(4);
+  }
+}
 
 .footer-list__col { 
+  @include span(6 of 12);
 }
+
+
+
+.footer-icon {
+  height: 20px;
+  margin: $minimal-spacing;
+  width: 20px;
+  background-color: pink;
+
+  &:first-of-type { margin-left: 0; }
+}
+
+
+
+
+.col:last-of-type { @include omega(); }

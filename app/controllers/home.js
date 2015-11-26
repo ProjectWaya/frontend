@@ -2,6 +2,17 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
   currentLocation: null,
+  queryParams: {
+    country: {
+      refreshModel: true
+    },
+    city: {
+      refreshModel: true
+    },
+    userStatus: {
+      refreshModel: true
+    }
+  },
 
   getCurrentPosition: Ember.on('init', function() {
     navigator.geolocation.getCurrentPosition(function(pos) {
@@ -21,4 +32,4 @@ export default Ember.Controller.extend({
       });
     }
   })
-}); 
+});

@@ -1,0 +1,20 @@
+@each $fileName in listFiles('public/assets/icons/*.svg') {
+  .icon-#{$fileName} {
+    background-image: url('/assets/icons/#{$fileName}.svg');
+    background-size: contain;
+  }
+}
+
+
+@each $fileName in listFiles('public/assets/navigation/*.svg') {
+  .nav-icon-#{$fileName} {
+    background-image: url('/assets/navigation/#{$fileName}.svg');
+    background-size: contain;
+  }
+}
+
+
+.icon { height: 40px; width: 40px; }
+.icon--small { height: 20px; width: 20px; }
+.icon--big { height: 60px; width: 60px; }
+

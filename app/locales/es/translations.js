@@ -1,11 +1,40 @@
 export default {
-  // "some.translation.key": "Text for some.translation.key",
-  //
-  // "a": {
-  //   "nested": {
-  //     "key": "Text for a.nested.key"
-  //   }
-  // },
-  //
-  // "key.with.interpolation": "Text with {{anInterpolation}}"
-};
+  "en": "English",
+  "fr": "French",
+  "es": "Spanish",
+  "de": "German",
+  "tr": "Turkish",
+  "ru": "Russian",
+  "zh": "Chinese",
+  "pages": {
+    "index": {
+      "headline": "Welcome",
+      "tagline": "Information and guidance for refugees and asylum seekers",
+      "buttons": {
+        "start": "Get Started"
+      },
+      "footer": {
+        "sections": {
+          "navigation": {
+            "about": "About WAYA",
+            "team": "Team",
+            "participate": "Participate",
+            "values": "Values",
+            "contact": "Contact",
+            "projects": "Our Projects"
+          },
+          "social": {
+            "headline": "Follow us"
+          },
+          "partners": {
+            "headline": "Partners"
+          },
+          "bottom": {
+            "admin": "Admin Login",
+            "terms": "Terms of use"
+          }
+        }
+      }
+    }
+  }
+}

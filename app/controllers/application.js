@@ -1,7 +1,11 @@
     const languages = [
-      { name: 'English',  iso: 'gb' },
-      { name: 'French',  iso: 'fr' },
-      { name: 'German',  iso: 'de' }
+      { name: 'en', flag: 'gb' },
+      { name: 'fr', flag: 'fr' },
+      { name: 'es', flag: 'es' },
+      { name: 'de', flag: 'de' },
+      { name: 'tr', flag: 'tr' },
+      { name: 'ru', flag: 'ru' },
+      { name: 'zh', flag: 'cn' },
     ];
 
     export default Ember.Controller.extend({
@@ -10,6 +14,7 @@
       actions: {
         languageChanged(lang) {
           this.set('selectedLanguage', lang);
+          this.set('i18n.locale', lang.name);
         }
       }
     });

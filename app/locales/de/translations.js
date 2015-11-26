@@ -1,11 +1,40 @@
 export default {
-  // "some.translation.key": "Text for some.translation.key",
-  //
-  // "a": {
-  //   "nested": {
-  //     "key": "Text for a.nested.key"
-  //   }
-  // },
-  //
-  // "key.with.interpolation": "Text with {{anInterpolation}}"
-};
+  "en": "Englisch",
+  "fr": "Französisch",
+  "es": "Spanisch",
+  "de": "Deutsch",
+  "tr": "Türkisch",
+  "ru": "Russisch",
+  "zh": "Chinesisch",
+  "pages": {
+    "index": {
+      "headline": "Willkommen",
+      "tagline": "Informationen und Hilfe für Flüchtlinge und Aslywerber",
+      "buttons": {
+        "start": "Starte"
+      },
+      "footer": {
+        "sections": {
+          "navigation": {
+            "about": "Über WAYA",
+            "team": "Team",
+            "participate": "Mitmachen",
+            "values": "Werte",
+            "contact": "Kontakt",
+            "projects": "Unsere Projekte"
+          },
+          "social": {
+            "headline": "Folge uns"
+          },
+          "partners": {
+            "headline": "Partner"
+          },
+          "bottom": {
+            "admin": "Admin Login",
+            "terms": "Nutzungsbestimmungen"
+          }
+        }
+      }
+    }
+  }
+}

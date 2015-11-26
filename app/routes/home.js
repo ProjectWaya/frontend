@@ -1,7 +1,27 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  model() {
+  beforeModel() {
+    !$.cookie('userInfo') && this.replaceWith('index');
+  },
+
+  model(params) {
+    var userInfoObject = JSON.parse($.cookie('userInfo'));
+
+    if (!params.country) {
+      params.country = userInfoObject.country;
+    }
+
+    if (!params.city) {
+      params.city = userInfoObject.city;
+    }
+
+    if (!params.userStatus) {
+      params.userStatus = userInfoObject.userStatus;
+    }
+
+    console.log("params", params);
+
     var points = this.get('store').find('point');
     var tags   = this.get('store').find('tag');
 
