@@ -6,18 +6,10 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('home');
-  this.route('onboarding');
-  this.route('finder', function() {
-    this.route('shelter');
-    this.route('health');
-    this.route('transportation');
-    this.route('asylum');
-    this.route('education');
-    this.route('administrative');
-    this.route('entertainment');
-    this.route('food');
+  this.route('home', function() {
+    this.route('category', {path: '/:category_id'});
   });
+  this.route('onboarding');
 });
 
 export default Router;
