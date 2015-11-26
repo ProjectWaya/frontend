@@ -21,8 +21,7 @@ export default Ember.Route.extend({
     }
 
     console.log("params", params);
-
-    var points = this.get('store').find('point');
+    var points = this.get('store').find('point', { city: params.city, country: params.country });
     var tags   = this.get('store').find('tag');
 
     return Ember.RSVP.hash({
