@@ -1,0 +1,12 @@
+<ul>
+  {{#each mainCategories as |category|}}
+    <li>{{category.name}}</li>
+    <li>
+      <ul>
+        {{#each category.childTags as |subCategory|}}
+          <li>{{subCategory.name}}</li>
+        {{/each}}
+      </ul>
+    <li>
+  {{/each}}
+</ul>

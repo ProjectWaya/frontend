@@ -7,7 +7,6 @@ export default DS.Model.extend({
   description: attr('string'),
   category:    attr('string'),
   sortno:      attr('number'),
-
   parentTag: DS.belongsTo('tag', { inverse: 'childTags' }),
   childTags: DS.hasMany('tag', { inverse: 'parentTag' })
 });

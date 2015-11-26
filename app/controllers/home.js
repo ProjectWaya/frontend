@@ -31,5 +31,7 @@ export default Ember.Controller.extend({
         return {location: L.latLng(p.get('latitude'), p.get('longitude'))};
       });
     }
-  })
+  }),
+
+  mainCategories: Ember.computed.filterBy('tags', 'category', 'main_category')
 });
