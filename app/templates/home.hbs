@@ -1,5 +1,9 @@
 <h2>Home</h2>
 
-{{wy-map}}
+{{#if currentLocation}}
+  {{wy-map location=currentLocation}}
+{{else}}
+  Loading map...
+{{/if}}
 
 {{outlet}}
