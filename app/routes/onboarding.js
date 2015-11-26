@@ -18,7 +18,8 @@ export default Ember.Route.extend({
 
       info = JSON.stringify(info);
 
-      $.userInfo(cookieName, info);
+      $.cookie(this.get('cookieName'), info);
+      this.transitionTo('index');
     }
   }
 });

@@ -1,14 +1,16 @@
 <h2>Onboarding</h2>
 
-<form {{action "updateUser" on="submit"}}>
+<form {{action "setInfo" on="submit"}}>
 
-  {{#power-select options=countries onchange=(action "onCountrySelected") as |country|}}
-    {{country}}
-  {{/power-select}}
-
-  {{#power-select options=cities onchange=(action "onCitySelected") as |city|}}
-    {{city}}
-  {{/power-select}}
+	<h3>Where are you?</h3>
+	<label>Country</label>
+    {{#power-select options=countries selected=defaultCountry onchange=(action "onCountrySelected") as |country|}}
+      {{country}}
+    {{/power-select}}
+    <label>City</label>
+    {{#power-select options=cities selected=defaultCity onchange=(action "onCitySelected") as |city|}}
+      {{city}}
+    {{/power-select}}
 
     <ul>
       {{#each roles as |role|}}
@@ -16,10 +18,11 @@
             {{radio-button
             value=role
             groupValue=currentRole
-            changed="roleChanged"}}
+            }}
               <label>{{role}}</label>
           </li>
       {{/each}}
     </ul>
+    <input type="submit" value="Continue"/>
 
 </form>
