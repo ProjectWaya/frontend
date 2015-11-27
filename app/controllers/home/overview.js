@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
+  activePoint: Ember.computed.alias('model.firstObject'),
   currentLocation: null,
   queryParams: {
     country: {
@@ -28,10 +29,15 @@ export default Ember.Controller.extend({
   points: Ember.computed({
     get() {
       return this.get('model').map((p) => {
-        return {location: L.latLng(p.get('latitude'), p.get('longitude'))};
+        return {
+          id: p.get('id'),
+          location: L.latLng(p.get('latitude'), p.get('longitude')),
+          pointModel: p
+        };
       });
     }
   }),
 
   mainCategories: Ember.computed.filterBy('tags', 'category', 'main_category')
+
 });

@@ -20,7 +20,6 @@ export default Ember.Route.extend({
       params.userStatus = userInfoObject.userStatus;
     }
 
-    console.log("params", params);
     var points = this.get('store').find('point', { city: params.city, country: params.country });
     var tags   = this.get('store').find('tag');
 

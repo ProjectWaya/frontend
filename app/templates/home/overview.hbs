@@ -1,7 +1,7 @@
 {{partial 'navigation'}}
 
 {{#if currentLocation}}
-  {{wy-map location=currentLocation points=points}}
+  {{wy-map location=currentLocation points=points activePoint=activePoint}}
 {{else}}
   <p class="text-subtle text-additional-info text-no-margin text-center">Loading map...</p>
 {{/if}}
@@ -12,14 +12,14 @@
    
     <div class="poi-information__description">
       <h3 class="h3 text-no-margin text-bold">Emergency Shelter</h3>
-      <h4 class="h4">Name XY</h4>
+      <h4 class="h4">{{activePoint.name}}</h4>
     </div>
     
     <div class="poi-information__description">
-      <p class="text-no-margin">63 Boulevard Victor Hugo</p>
-      <p class="text-no-margin">922000 Neuilly-sur-Seine, France</p>
-      <p class="text-no-margin">+33 1 34 556 56</p>
-      <p class="text-no-margin">www.xy-hospital.org</p>
+      <p class="text-no-margin">{{activePoint.address}}</p>
+      <p class="text-no-margin">{{activePoint.zip}} {{activePoint.city}}, {{activePoint.country}}</p>
+      <p class="text-no-margin">{{activePoint.phones}}</p>
+      <p class="text-no-margin">{{activePoint.webaddress}}</p>
     </div>
 
   </div>
