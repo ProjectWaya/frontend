@@ -22,7 +22,7 @@
   float: none;
   overflow: hidden;
   padding: $base-spacing 0; 
-  width: 100%; 
+  width: 100%;
   
   @include breakpoint($tablet) {
     @include span(3);
@@ -33,14 +33,26 @@
   @include span(6 of 12);
 }
 
+.footer-list__link {
+  padding: $minimal-spacing 0;
+}
 
 
 .footer-icon {
-  height: 20px;
+  height: 25px;
   margin: $minimal-spacing;
-  width: 20px;
+  width: 25px;
 
   &:first-of-type { margin-left: 0; }
+}
+
+@include breakpoint($tablet) {
+  .footer-list__group--text-right { text-align: right; }
+  .powerd-by {
+    display: inline-block;
+    margin-right: $base-spacing;
+    vertical-align: top;
+  }
 }
 
 

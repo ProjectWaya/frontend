@@ -14,9 +14,15 @@
 }
 .nav-label { padding-left: $maximal-spacing; }
 
+.sub-nav-group {
+  display: none;
+  .active + & { display: block; }
+}
+
 .sub-nav {
   padding-left: $double-base-spacing;
 }
+
 
 .sub-nav__item {
   border-bottom: 1px solid $lightgray;

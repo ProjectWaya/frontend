@@ -1,10 +1,3 @@
-%pull-left, .pull-left { 
-  float: left; 
-}
-%pull-right, .pull-right { 
-  float: right; 
-}
-
 .group:before, %group:before, 
 .group:after, %group:after {
   content: '';
@@ -21,20 +14,7 @@
   position: relative;
 }
 
-.is-hidden { display: none !important; }
-
-@include breakpoint($mobile) {
-  .is-hidden-mobile { display: none !important; }
-  .is-hidden-desktop { display: block !important; }
-}
-
-@include breakpoint($tablet) {
-  .is-hidden-desktop { display: none !important; }
-}
-
 
 .col:last-of-type { @include omega(); }
-
-
 
 .additional-spacing-bottom { margin-bottom: $maximal-spacing; }

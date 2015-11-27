@@ -16,3 +16,6 @@
 npm-debug.log
 testem.log
 .idea
+
+# OS generated files #
+.DS_Store
