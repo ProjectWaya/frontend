@@ -14,5 +14,6 @@ export default DS.Model.extend({
   phones: attr(),
   opening_hours: attr('string'),
   mails: attr('string'),
-  webaddress: attr('string')
+  webaddress: attr('string'),
+  tags: DS.hasMany('tag', { async: false })
 });
