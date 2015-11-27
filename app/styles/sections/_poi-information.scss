@@ -1,0 +1,31 @@
+.poi-information {
+  padding: $base-spacing;
+}
+
+@include breakpoint($mobile) {
+  .poi-information__main { 
+    @include span(9); 
+    border-right: 1px solid $black;
+  }
+}
+
+
+.poi-information__specification {
+  @include span(3);
+   
+  @include breakpoint($tablet) {
+    @include omega();
+    border-left: 1px solid $black;
+  }
+}
+
+
+@include breakpoint($tablet) {
+  .poi-information__name {
+    @include span(3);
+  }
+  .poi-information__description {
+    @include span(3);
+  }
+}
+

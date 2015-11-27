@@ -1,0 +1,5 @@
+.dotted-list:before {
+  content: '\2022 ';
+  color: $maincolor;
+  margin: $base-spacing;
+}

@@ -67,9 +67,7 @@ a {
   margin: 0;
 }
 
-.text-block {
-  display: block;
-}
+.text-block { display: block; }
 
 .text-error {
   color: $red;
@@ -87,9 +85,9 @@ a {
 
 .text-white { color: $white; }
 .text-default-color { color: $base-text-color; }
-
+.text-half-transparent { opacity: .5; }
 .text-no-link { color: inherit; }
 .text-no-link--no-hover:hover { color: inherit; }
 
-
+.text-margin-bottom { margin-bottom: $base-spacing; }
 

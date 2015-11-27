@@ -22,10 +22,4 @@
   border-bottom: 1px solid $lightgray;
   padding: $minimal-spacing;
   width: 100%;
-
-  &:before {
-    content: '\2022 ';
-    color: $maincolor;
-    padding-right: $base-spacing;
-  }
 }
