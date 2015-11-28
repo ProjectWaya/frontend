@@ -32,5 +32,15 @@ export default Ember.Route.extend({
   setupController(controller, model) {
     controller.set('model', model.points);
     controller.set('tags', model.tags);
+
+    var mapStubCategory = this.get('store').createRecord('tag', {
+      name: 'maps'
+    });
+
+    controller.set('mapCategory', mapStubCategory)
+  },
+
+  afterModel(model, transition) {
+    this.transitionTo('home.overview.all');
   }
 });

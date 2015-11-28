@@ -9,8 +9,9 @@ Router.map(function() {
   this.route('home', { path: '/:lang' }, function() {
     this.route('onboarding');
     this.route('overview', function() {
-      this.route('category', { path: '/:category_id' }, function() {
-        this.route('subCategory',{ path: ':sub_category_id' });
+      this.route('all');
+      this.route('category', { path: '/:categorySlug' }, function() {
+        this.route('subCategory',{ path: ':subCategorySlug' });
       });
     });
   });

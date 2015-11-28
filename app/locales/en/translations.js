@@ -6,6 +6,9 @@ export default {
   "tr": "Turkish",
   "ru": "Russian",
   "zh": "Chinese",
+  "navigation": {
+    "map": "Show map"
+  },
   "pages": {
     "index": {
       "headline": "Welcome",

@@ -6,26 +6,41 @@
   }
 }
 
+.nav__item .item-wrapper {
+  padding: $base-spacing 0;
+}
 
 .nav__item {
-  border-bottom: 1px solid $lightgray;
-  padding: $base-spacing;
+  border-top: 1px solid $lightgray;
+  padding: 0 $base-spacing;
   width: 100%;
 }
-.nav-label { padding-left: $maximal-spacing; }
+.nav-label { 
+  padding-left: $maximal-spacing;
+  .active & { color: $maincolor; }
+}
 
 .sub-nav-group {
   display: none;
   .active + & { display: block; }
 }
 
-.sub-nav {
-  padding-left: $double-base-spacing;
-}
-
-
 .sub-nav__item {
-  border-bottom: 1px solid $lightgray;
+  border-top: 1px solid $lightgray;
   padding: $minimal-spacing;
   width: 100%;
+  &.active { color: $maincolor; }
+}
+
+.nav__item.active {
+  .nav-icon-maps { @extend .nav-icon-maps.active; }
+  .nav-icon-shelter { @extend .nav-icon-shelter.active; }
+  .nav-icon-healthCare { @extend .nav-icon-healthCare.active; }
+  .nav-icon-transportation { @extend .nav-icon-transportation.active; }
+  .nav-icon-asylumProcess { @extend .nav-icon-asylumProcess.active; }
+  .nav-icon-education { @extend .nav-icon-education.active; }
+  .nav-icon-administrativeProcess { @extend .nav-icon-administrativeProcess.active; }
+  .nav-icon-entertainment { @extend .nav-icon-entertainment.active; }
+  .nav-icon-food { @extend .nav-icon-food.active; }
+  .nav-icon-contacts { @extend .nav-icon-contacts.active; }
 }

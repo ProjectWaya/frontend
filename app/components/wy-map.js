@@ -34,12 +34,8 @@ var markerLayer = MarkerLayer.extend({
 
 var customIcon = L.Icon.extend({
   options: {
-    shadowUrl: 'http://leafletjs.com/docs/images/leaf-shadow.png',
-    iconSize:     [38, 95],
-    shadowSize:   [50, 64],
-    iconAnchor:   [22, 94],
-    shadowAnchor: [4, 62],
-    popupAnchor:  [-3, -76]
+    iconSize:     [30, 41],
+    iconAnchor:   [15, 41]
   }
 });
 
@@ -84,13 +80,13 @@ export default EmberLeafletComponent.extend({
 
   _getDefaultIcon() {
     return new customIcon({
-        iconUrl: 'http://leafletjs.com/docs/images/leaf-green.png'
+        iconUrl: 'assets/icons/location.svg'
     });
   },
 
   _getHighlightIcon() {
     return new customIcon({
-        iconUrl: 'http://leafletjs.com/docs/images/leaf-red.png'
+        iconUrl: 'assets/icons/location_orange.svg'
     });
   },
 

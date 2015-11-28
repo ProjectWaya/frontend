@@ -26,9 +26,9 @@
 
   <div class="poi-information__specification col">
     <ul>
-      <li class="dotted-list">Woman</li>
-      <li class="dotted-list">Family</li>
-      <li class="dotted-list">Handicap</li>
+      {{#each activePoint.tags as |tag|}}
+        <li class="dotted-list">{{tag.name}}</li>
+      {{/each}}
     </ul>
   </div>
 </div>

@@ -6,7 +6,7 @@ export default Ember.Route.extend({
     if (!userInfo) {
       this.replaceWith('home.onboarding', { lang: this.get('i18n.locale') });
     } else {
-      this.replaceWith('home.overview', { lang: this.get('i18n.locale') })
+      this.replaceWith('home.overview.all', { lang: this.get('i18n.locale') })
     }
   }
 });

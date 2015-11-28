@@ -8,5 +8,16 @@ export default DS.Model.extend({
   category:    attr('string'),
   sortno:      attr('number'),
   parentTag: DS.belongsTo('tag', { inverse: 'childTags' }),
-  childTags: DS.hasMany('tag', { inverse: 'parentTag' })
+  childTags: DS.hasMany('tag', { inverse: 'parentTag' }),
+  className: Ember.computed('name', { 
+    get() {
+      return this.get('name').dasherize()
+    }
+  }),
+  categorySlug: Ember.computed('name', { 
+    get() {
+      return this.get('name').dasherize()
+    }
+  }),
+  subCategorySlug: Ember.computed.alias('categorySlug')
 });
