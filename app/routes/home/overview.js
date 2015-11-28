@@ -6,32 +6,12 @@ export default Ember.Route.extend({
   },
 
   model(params) {
-    var userInfoObject = JSON.parse($.cookie('userInfo'));
-
-    if (!params.country) {
-      params.country = userInfoObject.country;
-    }
-
-    if (!params.city) {
-      params.city = userInfoObject.city;
-    }
-
-    if (!params.userStatus) {
-      params.userStatus = userInfoObject.userStatus;
-    }
-
-    var points = this.get('store').find('point');
-    var tags   = this.get('store').find('tag');
-
-    return Ember.RSVP.hash({
-      points: points,
-      tags:   tags
-    });
+    return this.get('store').find('tag');
   },
 
   setupController(controller, model) {
-    controller.set('model', model.points);
-    controller.set('tags', model.tags);
+    controller.set('model', model);
+    controller.set('tags', model);
 
     var mapStubCategory = this.get('store').createRecord('tag', {
       name: 'maps'

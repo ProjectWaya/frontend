@@ -26,15 +26,20 @@ export default Ember.Controller.extend({
     }.bind(this));
   }),
 
-  points: Ember.computed({
+  points: Ember.computed('model.@each', {
     get() {
-      return this.get('model').map((p) => {
-        return {
-          id: p.get('id'),
-          location: L.latLng(p.get('latitude'), p.get('longitude')),
-          pointModel: p
-        };
-      });
+      var points = this.get('model');
+      if (points != undefined) {
+        return points.map((p) => {
+          return {
+            id: p.get('id'),
+            location: L.latLng(p.get('latitude'), p.get('longitude')),
+            pointModel: p
+          };
+        });
+      } else {
+        return [];
+      }
     }
   }),
 

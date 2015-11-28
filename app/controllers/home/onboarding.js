@@ -23,8 +23,8 @@ export default Ember.Controller.extend({
     },
     setInfo() {
       var info = {
-        country: this.get('selectedCountry'),
-        city: this.get('selectedCity'),
+        country:    this.get('selectedCountry'),
+        city:       this.get('selectedCity'),
         userStatus: this.get('selectedUserStatus')
       };
 
