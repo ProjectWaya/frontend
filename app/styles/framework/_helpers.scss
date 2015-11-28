@@ -11,8 +11,12 @@
 .group, %group {
   *zoom: 1;
   clear: both;
+  overflow: hidden;
   position: relative;
 }
+
+.group__align-right { float: right; }
+.group__align-left { float: left; }
 
 
 .col:last-of-type { @include omega(); }

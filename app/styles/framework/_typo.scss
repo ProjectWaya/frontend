@@ -46,10 +46,13 @@ code {
 
 
 a { 
-  color: $linkcolor; 
+  color: $linkcolor_hover; 
   cursor: pointer; 
-  text-decoration: none; 
-  &:hover { color: $linkcolor_hover; }
+  text-decoration: underline; 
+  &:hover { 
+    color: $linkcolor_hover;
+    text-decoration: none; 
+  }
 }
 
 .text-bold { font-weight: bold; }

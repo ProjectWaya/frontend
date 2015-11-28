@@ -7,9 +7,19 @@ export default {
   "ru": "Russian",
   "zh": "Chinese",
   "navigation": {
-    "map": "Show map"
+    "map": "Show map",
+    "user_status_info": {
+      "cta": "Click to change this settings",
+      "info_for": "Information for",
+      "city_preposition": "in"
+    }
   },
   "pages": {
+    "onboarding": {
+      "headline": "Where are you?",
+      "select_country_label": "Country",
+      "select_city_label": "City"
+    },
     "index": {
       "headline": "Welcome",
       "tagline": "Information and guidance for refugees and asylum seekers",

@@ -17,9 +17,6 @@ import Ember from 'ember';
           return languages.findBy('name', this.get('i18n.locale'))
         }
       }),
-      selectedCountry: null,
-      selectedCity: null,
-      selectedUserStatus: null,
       actions: {
         languageChanged(lang) {
           this.set('selectedLanguage', lang);

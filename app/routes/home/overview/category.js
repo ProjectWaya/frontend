@@ -1,10 +1,14 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
+  invalidatedModel: false,
   model(params) {
+    var userInfo        = JSON.parse(Ember.$.cookie('userInfo'));
     var tags            = this.modelFor('home.overview');
     var currentCategory = tags.findBy('categorySlug', params.categorySlug);
-    var points          = this.get('store').find('point', { filter: { tag: currentCategory.get('key'), city: this.get('userInfo.city.key') }});
+    var points          = this.get('store').find('point',
+      { filter: { tag: currentCategory.get('key'), city: userInfo.city.key }});
+
 
     return Ember.RSVP.hash({
       points:          points,
@@ -14,7 +18,15 @@ export default Ember.Route.extend({
 
   setupController(controller, model) {
     controller.set('model', model.points);
+    controller.set('pointModels', model.points);
     controller.set('currentCategory', model.currentCategory);
+  },
+
+  beforeModel(transition) {
+    var userInfo = Ember.$.cookie('userInfo');
+    if (!userInfo) {
+      this.replaceWith('home.onboarding', { lang: this.get('i18n.locale') });
+    }
   },
 
   actions: {
@@ -26,6 +38,9 @@ export default Ember.Route.extend({
         this.refresh();
         this.set('invalidatedModel', true);
       }
+    },
+    updatePoints(points) {
+      this.get('controller').set('pointModels', points);
     }
   }
 

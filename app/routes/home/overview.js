@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   beforeModel() {
-    !$.cookie('userInfo') && this.replaceWith('index');
+    !Ember.$.cookie('userInfo') && this.replaceWith('index');
   },
 
   model(params) {
@@ -20,7 +20,10 @@ export default Ember.Route.extend({
     controller.set('mapCategory', mapStubCategory)
   },
 
-  afterModel(model, transition) {
-    // this.transitionTo('home.overview.all');
+  beforeModel(transition) {
+    if (this.get('routeName') === transition.targetName || 
+      this.get('routeName')+'.index' === transition.targetName) {
+      this.transitionTo('home.overview.all');
+    }
   }
 });

@@ -3,6 +3,7 @@
   
   @include breakpoint($tablet) {
     @include span(3);
+    box-shadow: 5px 0 5px -3px $lightgray;
   }
 }
 
@@ -18,7 +19,7 @@
 }
 .nav-label { 
   padding-left: $maximal-spacing;
-  .active & { color: $maincolor; }
+  .active & { font-weight: bold; }
 }
 
 .sub-nav-group {

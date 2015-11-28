@@ -1,11 +1,15 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  currentCity: null,
-  currentCountry: null,
-  currentUserStatus: null,
-  classNames: ['settings-box'],
-  visible: Ember.computed('currentCity','currentCountry','currentUserStatus', function() {
-    return this.get('currentCity') && this.get('currentCountry') && this.get('currentUserStatus');
+  classNames:        ['settings-box'],
+
+  currentCity:       Ember.computed.alias('userInfo.city'),
+  currentCountry:    Ember.computed.alias('userInfo.country'),
+  currentUserStatus: Ember.computed.alias('userInfo.userStatus'),
+
+  visible: Ember.computed('currentCity','currentCountry','currentUserStatus', {
+    get() {
+      return this.get('currentCity') && this.get('currentCountry') && this.get('currentUserStatus');
+    }
   })
 });

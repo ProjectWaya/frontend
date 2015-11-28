@@ -1,8 +1,8 @@
 {{#if visible}}
   <div class="wrapper group">
     <div class="right group__align-right text-right">
-      <p class="h3 text-no-margin">Information for {{#link-to 'home.onboarding' class="text-subtle"}}{{currentUserStatus}}{{/link-to}} in {{#link-to 'home.onboarding' class="text-subtle"}}{{currentCity}}{{/link-to}}, {{#link-to 'home.onboarding' class="text-subtle"}}{{currentCountry}}{{/link-to}}</p>
-      {{#link-to 'home.onboarding' class="text-subtle"}}Click to change this settings{{/link-to}}
+      <p class="h3 text-no-margin">{{t "navigation.user_status_info.info_for"}} {{#link-to 'home.onboarding'}}{{currentUserStatus.name}}{{/link-to}} {{t "navigation.user_status_info.city_preposition"}} {{#link-to 'home.onboarding'}}{{currentCity.name}}{{/link-to}}, {{#link-to 'home.onboarding'}}{{currentCountry.name}}{{/link-to}}</p>
+      {{#link-to 'home.onboarding' class="text-subtle" tagName="span"}}{{t "navigation.user_status_info.cta"}}{{/link-to}}
     </div>
   </div>
 {{/if}}

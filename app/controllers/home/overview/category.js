@@ -1,19 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-  activePoint: Ember.computed.alias('model.firstObject'),
+  activePoint: Ember.computed.alias('pointModels.firstObject'),
   currentLocation: null,
-  queryParams: {
-    country: {
-      refreshModel: true
-    },
-    city: {
-      refreshModel: true
-    },
-    userStatus: {
-      refreshModel: true
-    }
-  },
 
   getCurrentPosition: Ember.on('init', function() {
     navigator.geolocation.getCurrentPosition(function(pos) {
@@ -26,9 +15,9 @@ export default Ember.Controller.extend({
     }.bind(this));
   }),
 
-  points: Ember.computed('model.@each', {
+  points: Ember.computed('pointModels.@each', {
     get() {
-      var points = this.get('model');
+      var points = this.get('pointModels');
       if (points != undefined) {
         return points.map((p) => {
           return {

@@ -1,16 +1,16 @@
 <div class="small-wrapper">
 
-  <h2 class="h2">Where are you?</h2>
+  <h2 class="h2">{{t "pages.onboarding.headline"}}</h2>
 
   <form {{action "setInfo" on="submit"}}>
     <fieldset>
-      <label>Country</label>
+      <label>{{t "pages.onboarding.select_country_label"}}</label>
       {{#power-select options=countries  selected=selectedCountry searchEnabled=false onchange=(action "onCountrySelected") as |country|}}
         {{country.name}}
       {{/power-select}}
     </fieldset>
     <fieldset>
-      <label>City</label>
+      <label>{{t "pages.onboarding.select_city_label"}}</label>
       {{#power-select options=cities selected=selectedCity searchEnabled=false onchange=(action "onCitySelected") as |city|}}
         {{city.name}}
       {{/power-select}}
@@ -19,10 +19,11 @@
     <fieldset>
       <ul>
         {{#each userStatus as |status|}}
-            <li>
-              {{radio-button value=status groupValue=selectedUserStatus}}
-              <label for="{{status.key}}">{{status.name}}</label>
-            </li>
+          <li>
+            {{#radio-button value=status groupValue=selectedUserStatus changed="onUserStatusSelected" }}
+              {{status.name}}
+            {{/radio-button}}
+          </li>
         {{/each}}
       </ul>
     </fieldset>

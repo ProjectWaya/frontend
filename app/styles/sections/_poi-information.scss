@@ -1,4 +1,5 @@
 .poi-information {
+  border-bottom: 1px solid $lightgray;
   overflow: hidden;
   padding: $base-spacing;
 }
@@ -6,7 +7,7 @@
 @include breakpoint($mobile) {
   .poi-information__main { 
     @include span(9); 
-    border-right: 1px solid $black;
+    border-right: 1px solid $lightgray;
   }
 }
 
@@ -16,7 +17,7 @@
    
   @include breakpoint($tablet) {
     @include omega();
-    border-left: 1px solid $black;
+    border-left: 1px solid $lightgray;
   }
 }
 

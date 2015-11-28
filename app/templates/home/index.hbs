@@ -2,7 +2,9 @@
   <h2 class="h2">{{t "pages.index.headline"}}</h2>
   <h3 class="h3">{{t "pages.index.tagline"}}</h3>
 
-  <button class="bttn bttn-action">{{t "pages.index.buttons.start"}}</button>
+  {{#link-to "home.overview" class="bttn bttn-action" tagName="button"}}
+    {{t "pages.index.buttons.start"}}
+  {{/link-to}}
 </div>
 
 {{outlet}}
