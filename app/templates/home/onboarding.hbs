@@ -5,13 +5,13 @@
   <form {{action "setInfo" on="submit"}}>
     <fieldset>
       <label>Country</label>
-      {{#power-select options=countries selected=selectedCountry onchange=(action "onCountrySelected") as |country|}}
+      {{#power-select options=countries selected=selectedCountry searchEnabled=false class="onboarding_select_box" onchange=(action "onCountrySelected") as |country|}}
         {{country.name}}
       {{/power-select}}
     </fieldset>
     <fieldset>
       <label>City</label>
-      {{#power-select options=cities selected=selectedCity onchange=(action "onCitySelected") as |city|}}
+      {{#power-select options=cities selected=selectedCity searchEnabled=false onchange=(action "onCitySelected") as |city|}}
         {{city.name}}
       {{/power-select}}
 
