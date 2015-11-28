@@ -47,6 +47,6 @@
     "ember-radio-button": "1.0.7",
     "ember-world-flags": "0.2.4",
     "glob": "4.0.5",
-	"node-sass": "3.4.2"
+    "node-sass": "3.4.2"
   }
 }
