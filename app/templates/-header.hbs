@@ -2,12 +2,12 @@
   <div class="wrapper">
       <div class="waya-logo"></div>
 
-      
-      <div class="settings-box">
-        <p class="h3 text-no-margin">Information for {{selectedUserStatus}} in {{selectedCity}}, {{selectedCountry}}</p>
-        <a class="text-subtle" href="#onboarding">[TODO] Click to change this settings</a>
-      </div>
-
+      {{#if selectedUserStatus}}
+        <div class="settings-box">
+          <p class="h3 text-no-margin">Information for {{selectedUserStatus}} in {{selectedCity}}, {{selectedCountry}}</p>
+          <a class="text-subtle" href="onboarding">[TODO] Click to change this settings</a>
+        </div>
+      {{/if}}
 
       
       <div class="language-picker">
