@@ -13,9 +13,5 @@ export default function() {
     return points;
   });
 
-  this.get('/user_statuses', function(db, request) {
-    return userStatus;
-  });
-
   this.passthrough('https://sleepy-fortress-7157.herokuapp.com/**');
 }
