@@ -41,6 +41,6 @@ export default Ember.Route.extend({
   },
 
   afterModel(model, transition) {
-    this.transitionTo('home.overview.all');
+    // this.transitionTo('home.overview.all');
   }
 });

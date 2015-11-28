@@ -1,36 +1,3 @@
 {{partial 'navigation'}}
 
-{{#if currentLocation}}
-  {{wy-map location=currentLocation points=points activePoint=activePoint}}
-{{else}}
-  <p class="text-subtle text-additional-info text-no-margin text-center">Loading map...</p>
-{{/if}}
-
-
-{{#if activePoint}}
-  <div class="poi-information">
-    <div class="poi-information__main col">
-     
-      <div class="poi-information__description">
-        <h3 class="h3 text-no-margin text-bold">{{activePoint.tags.firstObject.name}}</h3>
-        <h4 class="h4">{{activePoint.name}}</h4>
-      </div>
-      
-      <div class="poi-information__description">
-        <p class="text-no-margin">{{activePoint.address}}</p>
-        <p class="text-no-margin">{{activePoint.zip}} {{activePoint.city}}, {{activePoint.country}}</p>
-        <p class="text-no-margin">{{activePoint.phones}}</p>
-        <p class="text-no-margin">{{activePoint.webaddress}}</p>
-      </div>
-
-    </div>
-
-    <div class="poi-information__specification col">
-      <ul>
-        {{#each activePoint.tags as |tag|}}
-          <li class="dotted-list">{{tag.name}}</li>
-        {{/each}}
-      </ul>
-    </div>
-  </div>
-{{/if}}
+{{outlet}}
