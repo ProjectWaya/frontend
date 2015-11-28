@@ -11,7 +11,7 @@ export default DS.Model.extend({
   childTags: DS.hasMany('tag', { inverse: 'parentTag' }),
   className: Ember.computed('name', { 
     get() {
-      return this.get('name').dasherize()
+      return this.get('name').camelize()
     }
   }),
   categorySlug: Ember.computed('name', { 
