@@ -14,6 +14,13 @@ Router.map(function() {
         this.route('subCategory',{ path: ':subCategorySlug' });
       });
     });
+    this.route('about');
+    this.route('projects');
+    this.route('values');
+    this.route('team');
+    this.route('participate');
+    this.route('contact');
+    this.route('terms');
   });
 });
 
