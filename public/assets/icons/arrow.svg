@@ -3,12 +3,9 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 48 48" style="enable-background:new 0 0 48 48;" xml:space="preserve">
-<g id="facebook_x5F_white">
-	<rect style="fill:none;" width="48" height="48"/>
-	<path id="XMLID_236_" style="fill:#FFFFFF;" d="M42.1,1.375H5.9c-2.499,0-4.525,2.026-4.525,4.525v36.2
-		c0,2.499,2.026,4.525,4.525,4.525h20.363v-18.1h-4.525v-6.787h4.525v-5.656c0-4.389,3.552-7.919,7.919-7.919h5.656v6.787h-4.525
-		c-1.25,0-2.263,1.013-2.263,2.263v4.525h6.787v6.787H33.05v18.1h9.05c2.499,0,4.525-2.026,4.525-4.525V5.9
-		C46.625,3.389,44.589,1.375,42.1,1.375z"/>
+<g id="arrow_x5F_grey">
+	<path style="fill:#BDBDBD;" d="M17.18,33.18L26.34,24l-9.16-9.18L20,12l12,12L20,36L17.18,33.18z"/>
+	<path style="fill:none;" d="M0,0h48v48H0V0z"/>
 </g>
 <g id="Layer_1">
 </g>

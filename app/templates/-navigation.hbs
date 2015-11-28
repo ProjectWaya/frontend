@@ -8,12 +8,17 @@
     </div>
   {{/link-to}}
   {{#each mainCategories as |category|}}
-    {{#link-to "home.overview.category" category class="media-table nav__item" tagName="li"}}
-      <div class="item-wrapper">
-        <div class="media__object icon nav-icon nav-icon-{{category.className}}"></div>
-        <div class="media__body nav-label"> 
-          {{category.name}}
+    {{#link-to "home.overview.category" category class="nav__item" tagName="li"}}
+      <div class="item-wrapper media-table media--body-right">
+        <div class="media__object">
+          <div class="media-table">
+            <div class="media__object icon nav-icon nav-icon-{{category.className}}"></div>
+            <div class="media__body nav-label"> 
+              {{category.name}}
+            </div>
+          </div>
         </div>
+        <div class="media__body icon icon-arrow"></div>
       </div>
     {{/link-to}}
     <li class="sub-nav-group sub-nav-group-{{category.name}}">

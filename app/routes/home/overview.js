@@ -1,10 +1,6 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  beforeModel() {
-    !Ember.$.cookie('userInfo') && this.replaceWith('index');
-  },
-
   model(params) {
     return this.get('store').find('tag');
   },

@@ -6,10 +6,10 @@ module.exports = function(defaults) {
     sassOptions: {
       functions: {
         "listFiles($pattern)": function(pattern) {
-          var sass = require('node-sass');
-          var path = require('path')
+          var sass     = require('node-sass');
+          var path     = require('path');
           var globSync = require('glob').sync;
-          var files  = globSync(pattern.getValue(), { cwd: __dirname })
+          var files    = globSync(pattern.getValue(), { cwd: __dirname });
 
           list = new sass.types.List(files.length);
 
