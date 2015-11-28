@@ -10,7 +10,9 @@ module.exports = function(environment) {
     EmberENV: {
       FEATURES: {}
     },
-    APP: {},
+    APP: {
+      defaultLocale: 'en'
+    },
      contentSecurityPolicy: {
       'img-src': "* 'self' 'unsafe-inline'",
       'connect-src': "*",
