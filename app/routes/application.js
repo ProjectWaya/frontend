@@ -6,24 +6,25 @@ export default Ember.Route.extend({
   },
   actions: {
     didTransition: function () {
+      var controller = this.get('controller');
+      var resetValues = function() {
+        controller.set('selectedCountry', null);
+        controller.set('selectedCity', null);
+        controller.set('selectedUserStatus', null);
+      };
+
       var userInfo = $.cookie('userInfo');
-      console.log("cookie");
-      console.log(userInfo);
       if (userInfo) {
         var userInfoObject = JSON.parse(userInfo);
         if (userInfoObject) {
-          this.get('controller').set('selectedCountry', userInfoObject.country);
-          this.get('controller').set('selectedCity', userInfoObject.city);
-          this.get('controller').set('selectedUserStatus', userInfoObject.userStatus);
+          controller.set('selectedCountry', userInfoObject.country);
+          controller.set('selectedCity', userInfoObject.city);
+          controller.set('selectedUserStatus', userInfoObject.userStatus);
         } else {
-          this.get('controller').set('selectedCountry', null);
-          this.get('controller').set('selectedCity', null);
-          this.get('controller').set('selectedUserStatus', null);
+          resetValues();
         }
       } else {
-        this.get('controller').set('selectedCountry', null);
-        this.get('controller').set('selectedCity', null);
-        this.get('controller').set('selectedUserStatus', null);
+        resetValues();
       }
     }
   }
