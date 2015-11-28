@@ -1,6 +1,7 @@
 import points from "./static-data/points/points";
 import userStatus from "./static-data/user-status/user-status";
 import tags from "./static-data/tags/tags";
+import countries from "./static-data/countries/countries";
 
 export default function() {
   this.namespace = "/api/en/v1";
@@ -16,4 +17,8 @@ export default function() {
   this.get('/user_statuses', function(db, request) {
     return userStatus;
   });
+
+  this.get('/countries', function(db, request) {
+    return countries;
+  });  
 }

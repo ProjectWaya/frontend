@@ -1,19 +1,11 @@
 import Ember from 'ember';
 
-const countries = ['France', 'Austria', 'Germany', 'Spain'];
-const cities = ['Paris', 'Lyon', 'Marseille', 'Bordeaux'];
-const userStatus = ['Refugee', 'Asylum seeker', 'Just arrived'];
-
 export default Ember.Controller.extend({
-  countries: countries,
-  cities: cities,
-  userStatus: userStatus,
-  selectedCountry: countries[0],
-  selectedCity: cities[0],
-  selectedUserStatus: userStatus[0],
+  selectedCountry: Ember.computed.alias('countries.firstObject'),
+  cities: Ember.computed.alias('selectedCountry.cities'),
+  selectedCity: Ember.computed.alias('cities.firstObject'),
+  selectedUserStatus: Ember.computed.alias('userStatus.firstObject'),
   cookieName: 'userInfo',
-  country: null,
-  city: null,
 
   isValidCountry: Ember.computed.bool('selectedCountry'),
   isValidCity: Ember.computed.bool('selectedCity'),
@@ -33,7 +25,7 @@ export default Ember.Controller.extend({
       var info = {
         country: this.get('selectedCountry'),
         city: this.get('selectedCity'),
-        userStatus: this.get('selectedRole')
+        userStatus: this.get('selectedUserStatus')
       };
 
       info = JSON.stringify(info);
