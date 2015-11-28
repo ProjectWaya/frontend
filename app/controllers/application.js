@@ -24,6 +24,10 @@ import Ember from 'ember';
         languageChanged(lang) {
           this.set('selectedLanguage', lang);
           this.set('i18n.locale', lang.name);
+          // TODO: uncomment before deploy to change URL when language changes
+          // var pathWithoutLanguage = window.location.hash.substr(5)
+          // window.location.hash = "#/" + lang.name + "/" + pathWithoutLanguage;
+          // location.reload()
         }
       }
     });
