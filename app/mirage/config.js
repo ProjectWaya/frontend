@@ -4,6 +4,7 @@ import tags from "./static-data/tags/tags";
 
 export default function() {
   this.namespace = "/api/en/v1";
+  this.passthrough('https://sleepy-fortress-7157.herokuapp.com/**');
 
   this.get('/tags', function(db, request) {
     return tags;
@@ -16,6 +17,4 @@ export default function() {
   this.get('/user_statuses', function(db, request) {
     return userStatus;
   });
-
-  this.passthrough();
 }
