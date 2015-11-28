@@ -12,7 +12,11 @@ import Ember from 'ember';
 
     export default Ember.Controller.extend({
       languages: languages,
-      selectedLanguage: languages[0],
+      selectedLanguage: Ember.computed('i18n.locale', {
+        get() {
+          return languages.findBy('name', this.get('i18n.locale'))
+        }
+      }),
       selectedCountry: $.cookie('userInfo') ? JSON.parse($.cookie('userInfo')).country.name : null,
       selectedCity: $.cookie('userInfo') ? JSON.parse($.cookie('userInfo')).city.name : null,
       selectedUserStatus: $.cookie('userInfo') ? JSON.parse($.cookie('userInfo')).userStatus.name : null,
