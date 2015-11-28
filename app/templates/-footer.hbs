@@ -4,15 +4,27 @@
     <div class="footer-list__group col">
       <h3 class="h3 text-white text-half-transparent"><img src="assets/images/waya_logo_white.png" alt="WAYA" title="WAYA" width="75px"></h3>
       <div class="footer-list__col col">
+        {{#link-to 'home.about'}}
         <a link="#" class="footer-list__link text-block text-white">{{t "pages.index.footer.sections.navigation.about" }}</a>
+        {{/link-to}}
+        {{#link-to 'home.projects'}}
         <a link="#" class="footer-list__link text-block text-white">{{t "pages.index.footer.sections.navigation.projects" }}</a>
+        {{/link-to}}
+        {{#link-to 'home.values'}}
         <a link="#" class="footer-list__link text-block text-white">{{t "pages.index.footer.sections.navigation.values" }}</a>
+        {{/link-to}}
       </div>
     
       <div class="footer-list__col col">
+        {{#link-to 'home.team'}}
         <a link="#" class="footer-list__link text-block text-white">{{t "pages.index.footer.sections.navigation.team" }}</a>
+        {{/link-to}}
+        {{#link-to 'home.participate'}}
         <a link="#" class="footer-list__link text-block text-white">{{t "pages.index.footer.sections.navigation.participate" }}</a>
+        {{/link-to}}
+        {{#link-to 'home.contact'}}
         <a link="#" class="footer-list__link text-block text-white">{{t "pages.index.footer.sections.navigation.contact" }}</a>
+        {{/link-to}}
       </div>
     </div>
 
@@ -43,8 +55,9 @@
 
       <a link="http://singa.fr/" class="text-margin-bottom"><img src="assets/images/singa_logo_waya_footer.svg" alt="Singa France" title="Singa France" width="65px"></a>
 
-      <a link="#" class="footer-list__link text-white text-block">Admin Login</a>
+      {{#link-to 'home.terms'}}
       <a link="#" class="footer-list__link text-white text-block">Terms of  use</a>
+      {{/link-to}}
     </div>
 
   </div>
