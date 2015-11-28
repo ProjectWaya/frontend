@@ -4,7 +4,7 @@ export default Ember.Route.extend({
 
   model() {
     var userStatus = this.get('store').find('user-status');
-    var countries = this.get('store').find('country');
+    var countries = this.get('store').find('country', {include: 'cities'});
     console.log(countries);
     return Ember.RSVP.hash({
       userStatus: userStatus,
