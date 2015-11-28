@@ -17,9 +17,9 @@ import Ember from 'ember';
           return languages.findBy('name', this.get('i18n.locale'))
         }
       }),
-      selectedCountry: $.cookie('userInfo') ? JSON.parse($.cookie('userInfo')).country.name : null,
-      selectedCity: $.cookie('userInfo') ? JSON.parse($.cookie('userInfo')).city.name : null,
-      selectedUserStatus: $.cookie('userInfo') ? JSON.parse($.cookie('userInfo')).userStatus.name : null,
+      selectedCountry: null,
+      selectedCity: null,
+      selectedUserStatus: null,
       actions: {
         languageChanged(lang) {
           this.set('selectedLanguage', lang);
