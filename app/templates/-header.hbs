@@ -1,8 +1,8 @@
 <div class="header">
+  {{wy-settings-box currentCity=selectedCity.name currentCountry=selectedCountry.name currentUserStatus=selectedUserStatus.name}}
   <div class="wrapper">
       <div class="waya-logo"></div>
 
-      {{wy-settings-box currentCity=selectedCity.name currentCountry=selectedCountry.name currentUserStatus=selectedUserStatus.name}}
 
       <div class="language-picker">
         {{#power-select options=languages searchEnabled=false selected=selectedLanguage onchange=(action "languageChanged") as |language|}}

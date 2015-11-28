@@ -20,7 +20,7 @@ export default Ember.Route.extend({
       params.userStatus = userInfoObject.userStatus;
     }
 
-    var points = this.get('store').find('point', { city: params.city, country: params.country });
+    var points = this.get('store').find('point');
     var tags   = this.get('store').find('tag');
 
     return Ember.RSVP.hash({

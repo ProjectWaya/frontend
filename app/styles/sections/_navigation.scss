@@ -11,6 +11,7 @@
 }
 
 .nav__item {
+  cursor: pointer;
   border-top: 1px solid $lightgray;
   padding: 0 $base-spacing;
   width: 100%;
@@ -26,6 +27,7 @@
 }
 
 .sub-nav__item {
+  cursor: pointer;
   border-top: 1px solid $lightgray;
   padding: $minimal-spacing;
   width: 100%;

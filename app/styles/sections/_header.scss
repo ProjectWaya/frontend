@@ -1,5 +1,7 @@
 .header {
   margin-bottom: $maximal-spacing;
+  padding: 0;
+  position: relative;
 }
 
 .waya-logo { 
@@ -15,9 +17,11 @@
   }
 }
 
-.settings-box { 
-  clear: both; 
-  padding: $double-base-spacing 0; 
+.settings-box {
+  background-color: $lightgray;
+  clear: both;
+  padding: 0;
+  width: 100%;
 }
 
 .language-picker {

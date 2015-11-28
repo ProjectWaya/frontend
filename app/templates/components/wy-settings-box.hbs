@@ -1,6 +1,8 @@
 {{#if visible}}
-    <div class="settings-box">
-        <p class="h3 text-no-margin">Information for {{#link-to 'home.onboarding' class="text-subtle"}}{{currentUserStatus}}{{/link-to}} in {{#link-to 'home.onboarding' class="text-subtle"}}{{currentCity}}{{/link-to}}, {{#link-to 'home.onboarding' class="text-subtle"}}{{currentCountry}}{{/link-to}}</p>
+  <div class="wrapper group">
+    <div class="right group__align-right text-right">
+      <p class="h3 text-no-margin">Information for {{#link-to 'home.onboarding' class="text-subtle"}}{{currentUserStatus}}{{/link-to}} in {{#link-to 'home.onboarding' class="text-subtle"}}{{currentCity}}{{/link-to}}, {{#link-to 'home.onboarding' class="text-subtle"}}{{currentCountry}}{{/link-to}}</p>
       {{#link-to 'home.onboarding' class="text-subtle"}}Click to change this settings{{/link-to}}
     </div>
+  </div>
 {{/if}}
