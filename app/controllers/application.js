@@ -11,6 +11,9 @@
     export default Ember.Controller.extend({
       languages: languages,
       selectedLanguage: languages[0],
+      selectedCountry: JSON.parse($.cookie('userInfo')).country.name,
+      selectedCity: JSON.parse($.cookie('userInfo')).city.name,
+      selectedUserStatus: JSON.parse($.cookie('userInfo')).userStatus.name,
       actions: {
         languageChanged(lang) {
           this.set('selectedLanguage', lang);
