@@ -1,4 +1,6 @@
-    const languages = [
+import Ember from 'ember';
+
+      const languages = [
       { name: 'en', flag: 'gb' },
       { name: 'fr', flag: 'fr' },
       { name: 'es', flag: 'es' },

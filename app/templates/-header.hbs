@@ -2,19 +2,13 @@
   <div class="wrapper">
       <div class="waya-logo"></div>
 
-      {{#if selectedUserStatus}}
-        <div class="settings-box">
-          <p class="h3 text-no-margin">Information for {{selectedUserStatus}} in {{selectedCity}}, {{selectedCountry}}</p>
-          <a class="text-subtle" href="onboarding">[TODO] Click to change this settings</a>
-        </div>
-      {{/if}}
+      {{wy-settings-box currentCity=selectedCity currentCountry=selectedCountry currentUserStatus=selectedUserStatus}}
 
-      
       <div class="language-picker">
         {{#power-select options=languages searchEnabled=false selected=selectedLanguage onchange=(action "languageChanged") as |language|}}
           {{world-flag language.flag 16}} <label class="language-picker__label">{{t language.name }}</label>
         {{/power-select}}
-      </div> 
-      
+      </div>
+
     </div>
 </div>
