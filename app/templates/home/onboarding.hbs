@@ -7,13 +7,13 @@
     <fieldset>
       <label>Country</label>
       {{#power-select options=countries selected=selectedCountry onchange=(action "onCountrySelected") as |country|}}
-        {{country}}
+        {{country.name}}
       {{/power-select}}
     </fieldset>
     <fieldset>
       <label>City</label>
       {{#power-select options=cities selected=selectedCity onchange=(action "onCitySelected") as |city|}}
-        {{city}}
+        {{city.name}}
       {{/power-select}}
 
     </fieldset>
@@ -22,7 +22,7 @@
         {{#each userStatus as |status|}}
             <li>
               {{radio-button value=status groupValue=selectedUserStatus}}
-              <label for="{{status.key}}">{{status}}</label>
+              <label for="{{status.key}}">{{status.name}}</label>
             </li>
         {{/each}}
       </ul>

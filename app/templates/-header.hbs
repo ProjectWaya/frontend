@@ -2,19 +2,13 @@
   <div class="wrapper">
       <div class="waya-logo"></div>
 
-      
-      <div class="settings-box">
-        <p class="h3 text-no-margin">####TODO#### Information for asylum seekers in Paris, France</p>
-        <a class="text-subtle" href="#">Click to change this settings</a>
-      </div>
+      {{wy-settings-box currentCity=selectedCity.name currentCountry=selectedCountry.name currentUserStatus=selectedUserStatus.name}}
 
-
-      
       <div class="language-picker">
         {{#power-select options=languages searchEnabled=false selected=selectedLanguage onchange=(action "languageChanged") as |language|}}
           {{world-flag language.flag 16}} <label class="language-picker__label">{{t language.name }}</label>
         {{/power-select}}
-      </div> 
-      
+      </div>
+
     </div>
 </div>

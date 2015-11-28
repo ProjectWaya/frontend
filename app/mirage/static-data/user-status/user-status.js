@@ -3,21 +3,21 @@ export default {
     "id": "uuid-1",
     "type": "user_status",
     "attributes": {
-      "name": "asylum_seeker",
+      "name": "Asylum seeker",
       "key": "asylum_seeker_key"
     }
   }, {
     "id": "uuid-2",
     "type": "user_status",
     "attributes": {
-      "name": "refugee",
+      "name": "Refugee",
       "key": "refugee_key"
     }
   }, {
     "id": "uuid-3",
     "type": "user_status",
     "attributes": {
-      "name": "just_arrived",
+      "name": "Just arrived",
       "key": "just_arrived_key"
     }
   }]

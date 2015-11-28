@@ -16,4 +16,6 @@ export default function() {
   this.get('/user_statuses', function(db, request) {
     return userStatus;
   });
+
+  this.passthrough();
 }
