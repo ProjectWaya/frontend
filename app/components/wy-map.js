@@ -50,6 +50,7 @@ export default EmberLeafletComponent.extend({
   points: null,
   classNameBindings: ['isReady'],
   classNames: ['map'],
+  zoom: 10,
   isReady: Ember.computed.bool('location'),
   // Default location
   location: {
